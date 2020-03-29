@@ -100,28 +100,40 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 	public JPanel showLane() {
 		return jp;
 	}
-
+	
+	public void actionPinSetterView() {
+		
+		if ( psShowing == false ) {
+			psv.show();
+			psShowing=true;
+		} else if ( psShowing == true ) {
+			psv.hide();
+			psShowing=false;
+		}
+		
+	}
+	
+	public void actionViewLane() {
+		
+		if ( laneShowing == false ) {
+			lv.show();
+			laneShowing=true;
+		} else if ( laneShowing == true ) {
+			lv.hide();
+			laneShowing=false;
+		}
+		
+	}
+  // Moved PinSetter View and LaneView to seperate methods
 	public void actionPerformed( ActionEvent e ) {
 		if ( lane.isPartyAssigned() ) { 
 			if (e.getSource().equals(viewPinSetter)) {
-				if ( psShowing == false ) {
-					psv.show();
-					psShowing=true;
-				} else if ( psShowing == true ) {
-					psv.hide();
-					psShowing=false;
-				}
+				actionPinSetterView();
 			}
 		}
 		if (e.getSource().equals(viewLane)) {
 			if ( lane.isPartyAssigned() ) { 
-				if ( laneShowing == false ) {
-					lv.show();
-					laneShowing=true;
-				} else if ( laneShowing == true ) {
-					lv.hide();
-					laneShowing=false;
-				}
+				actionViewLane();
 			}
 		}
 		if (e.getSource().equals(maintenance)) {

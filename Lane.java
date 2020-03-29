@@ -188,6 +188,14 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * entry point for execution of this lane 
 	 */
 	
+	public void frame_handler() {
+		try{
+			Date date = new Date();
+			String dateString = "" + date.getHours() + ":" + date.getMinutes() + " " + date.getMonth() + "/" + date.getDay() + "/" + (date.getYear() + 1900);
+			ScoreHistoryFile.addScore(currentThrower.getNick(), dateString, new Integer(cumulScores[bowlIndex][9]).toString());
+		} catch (Exception e) {System.err.println("Exception in addScore. "+ e );}
+	}
+	
 	public void run_print(ScoreReport sr, Iterator printIt, Bowler thisBowler) {
 		
 		while (printIt.hasNext() && (thisBowler.getNick() == (String)printIt.next())){
@@ -195,14 +203,6 @@ public class Lane extends Thread implements PinsetterObserver {
 			sr.sendPrintout();
 		}
 		
-	}
-	
-	public void frame_handler() {
-		try{
-			Date date = new Date();
-			String dateString = "" + date.getHours() + ":" + date.getMinutes() + " " + date.getMonth() + "/" + date.getDay() + "/" + (date.getYear() + 1900);
-			ScoreHistoryFile.addScore(currentThrower.getNick(), dateString, new Integer(cumulScores[bowlIndex][9]).toString());
-		} catch (Exception e) {System.err.println("Exception in addScore. "+ e );}
 	}
 	
 	public void run() {
@@ -291,6 +291,19 @@ public class Lane extends Thread implements PinsetterObserver {
 		}
 	}
 	
+	public void pinsDownOnThrow(PinsetterEvent pe) {
+		
+		if (pe.pinsDownOnThisThrow() == 10) {		// threw a strike
+			canThrowAgain = false;
+			//publish( lanePublish() );
+		} else if (pe.getThrowNumber() == 2) {
+			canThrowAgain = false;
+			//publish( lanePublish() );
+		} else if (pe.getThrowNumber() == 3)  
+			System.out.println("I'm here...");
+		
+	}
+	
 	/** recievePinsetterEvent()
 	 * 
 	 * recieves the thrown event from the pinsetter
@@ -299,6 +312,7 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * @post the event has been acted upon if desiered
 	 * 
 	 * @param pe 		The pinsetter event that has been received.
+	 * 
 	 */
 	public void receivePinsetterEvent(PinsetterEvent pe) {
 		
@@ -325,15 +339,7 @@ public class Lane extends Thread implements PinsetterObserver {
 						//publish( lanePublish() );
 					}
 				} else { // its not the 10th frame
-			
-					if (pe.pinsDownOnThisThrow() == 10) {		// threw a strike
-						canThrowAgain = false;
-						//publish( lanePublish() );
-					} else if (pe.getThrowNumber() == 2) {
-						canThrowAgain = false;
-						//publish( lanePublish() );
-					} else if (pe.getThrowNumber() == 3)  
-						System.out.println("I'm here...");
+					pinsDownOnThrow(pe);
 				}
 			} else {								//  this is not a real throw, probably a reset
 			}
