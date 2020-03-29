@@ -432,7 +432,7 @@ public class Lane extends Thread implements PinsetterObserver {
 			flaghalt = 1;
 		}
 		
-		int[][] params = new int[][] {{bowlIndex, frameNumber+1, ball}, curScores, {flaghalt}};
+		int[][] params = new int[][] {{bowlIndex}, {frameNumber+1},{ball}, curScores, {flaghalt}};
 		LaneEvent laneEvent = new LaneEvent(party, params, currentThrower, cumulScores, scores);
 		return laneEvent;
 	}

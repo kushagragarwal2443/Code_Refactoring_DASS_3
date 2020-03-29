@@ -38,18 +38,18 @@ public class LaneEvent {
 	int[] curScores;
 	boolean mechProb;
 	
-	public LaneEvent(Party pty, int[][] paramsandCurScores, Bowler theBowler, int[][] theCumulScore, HashMap theScore) {
+	public LaneEvent(Party pty, int[][] params, Bowler theBowler, int[][] theCumulScore, HashMap theScore) {
 		
 		p = pty;
-		index = paramsandCurScores[0][0];
+		index = params[0][0];
 		bowler = theBowler;
 		cumulScore = theCumulScore;
 		score = theScore;
-		curScores = paramsandCurScores[1];
-		frameNum = paramsandCurScores[0][1];
-		ball = paramsandCurScores[0][2];
+		curScores = params[3];
+		frameNum = params[1][0];
+		ball = params[2][0];
 		
-		if(paramsandCurScores[2][0] == 1) {
+		if(params[4][0] == 1) {
 			mechProb = true;
 		}
 		
