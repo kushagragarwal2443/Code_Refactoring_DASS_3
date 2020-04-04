@@ -65,7 +65,7 @@
  *
  */
 
-/**
+/*
  * Class to represent the pinsetter
  *
  */
@@ -146,9 +146,12 @@ public class Pinsetter {
 			}
 		}
 
+		//noinspection CatchMayIgnoreException
 		try {
 			Thread.sleep(500);				// pinsetter is where delay will be in a real game
-		} catch (Exception e) {}
+		} catch (Exception e) {
+
+		}
 
 		sendEvent(count);
 
@@ -162,6 +165,7 @@ public class Pinsetter {
 	 * @pre none
 	 * @post pinsetters state is reset
 	 */
+	@SuppressWarnings("CatchMayIgnoreException")
 	public void reset() {
 		foul = false;
 		throwNumber = 1;

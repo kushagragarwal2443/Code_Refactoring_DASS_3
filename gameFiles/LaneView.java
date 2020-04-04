@@ -14,7 +14,7 @@ public class LaneView implements LaneObserver, ActionListener {
 	private boolean initDone = true;
 
 	final JFrame frame;
-	final Container cpanel;
+	final Container cPanel;
 	Vector bowlers;
 	int cur;
 	Iterator bowlIt;
@@ -35,8 +35,8 @@ public class LaneView implements LaneObserver, ActionListener {
 
 		initDone = true;
 		frame = new JFrame("Lane " + laneNum + ":");
-		cpanel = frame.getContentPane();
-		cpanel.setLayout(new BorderLayout());
+		cPanel = frame.getContentPane();
+		cPanel.setLayout(new BorderLayout());
 
 		frame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -44,7 +44,7 @@ public class LaneView implements LaneObserver, ActionListener {
 			}
 		});
 
-		cpanel.add(new JPanel());
+		cPanel.add(new JPanel());
 
 	}
 
@@ -130,6 +130,7 @@ public class LaneView implements LaneObserver, ActionListener {
 				try {
 					Thread.sleep(1);
 				} catch (Exception e) {
+
 				}
 			}
 
@@ -137,8 +138,8 @@ public class LaneView implements LaneObserver, ActionListener {
 				&& le.getBall() == 0
 				&& le.getIndex() == 0) {
 				System.out.println("Making the frame.");
-				cpanel.removeAll();
-				cpanel.add(makeFrame(le.getParty()), "Center");
+				cPanel.removeAll();
+				cPanel.add(makeFrame(le.getParty()), "Center");
 
 				// Button Panel
 				JPanel buttonPanel = new JPanel();
@@ -154,18 +155,18 @@ public class LaneView implements LaneObserver, ActionListener {
 
 				buttonPanel.add(maintenancePanel);
 
-				cpanel.add(buttonPanel, "South");
+				cPanel.add(buttonPanel, "South");
 
 				frame.pack();
 
 			}
 
-			int[][] lescores = le.getCumulScore();
+			int[][] le_scores = le.getCumulScore();
 			for (int k = 0; k < numBowlers; k++) {
 				for (int i = 0; i <= le.getFrameNum() - 1; i++) {
-					if (lescores[k][i] != 0)
+					if (le_scores[k][i] != 0)
 						scoreLabel[k][i].setText(
-							(Integer.valueOf(lescores[k][i])).toString());
+							(Integer.valueOf(le_scores[k][i])).toString());
 				}
 				for (int i = 0; i < 21; i++) {
 					if (((int[]) ((HashMap) le.getScore())

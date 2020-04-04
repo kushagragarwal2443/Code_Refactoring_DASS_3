@@ -20,7 +20,7 @@
  * 
  */
 
-/**
+/*
  * Class for GUI components need to add a party
  *
  */
@@ -50,7 +50,7 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 	private final JList partyList;
 	private final JList allBowlers;
 	private final Vector party;
-	private Vector bowlerdb;
+	private Vector bowler_db;
 	private Integer lock;
 
 	private final ControlDeskView controlDesk;
@@ -92,12 +92,12 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 		bowlerPanel.setBorder(new TitledBorder("Bowler Database"));
 
 		try {
-			bowlerdb = new Vector(BowlerFile.getBowlers());
+			bowler_db = new Vector(BowlerFile.getBowlers());
 		} catch (Exception e) {
 			System.err.println("File Error");
-			bowlerdb = new Vector();
+			bowler_db = new Vector();
 		}
-		allBowlers = new JList(bowlerdb);
+		allBowlers = new JList(bowler_db);
 		allBowlers.setVisibleRowCount(8);
 		allBowlers.setFixedCellWidth(120);
 		JScrollPane bowlerPane = new JScrollPane(allBowlers);
@@ -159,7 +159,7 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 
 	}
 	
-	public void actionaddPatron() {
+	public void action_addPatron() {
 		
 		if (selectedNick != null && party.size() < maxSize) {
 			if (party.contains(selectedNick)) {
@@ -174,7 +174,7 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(addPatron)) {
-			actionaddPatron();
+			action_addPatron();
 		}
 		if (e.getSource().equals(remPatron) && selectedMember != null) {
 				party.removeElement(selectedMember);
@@ -230,8 +230,8 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 					newPatron.getNick(),
 					newPatron.getFull(),
 					newPatron.getEmail());
-				bowlerdb = new Vector(BowlerFile.getBowlers());
-				allBowlers.setListData(bowlerdb);
+				bowler_db = new Vector(BowlerFile.getBowlers());
+				allBowlers.setListData(bowler_db);
 				party.add(newPatron.getNick());
 				partyList.setListData(party);
 			} else {

@@ -1,4 +1,4 @@
-/**
+/*
  *
  * To change this generated comment edit the template variable "typecomment":
  * Window>Preferences>Java>Templates.
@@ -11,6 +11,7 @@ import java.io.*;
 
 public class ScoreHistoryFile {
 
+	@SuppressWarnings("SpellCheckingInspection")
 	private static final String SCOREHISTORY_DAT = "SCOREHISTORY.DAT";
 
 	public static void addScore(String nick, String date, String score)
@@ -24,6 +25,7 @@ public class ScoreHistoryFile {
 		out.close();
 	}
 
+	@SuppressWarnings("SpellCheckingInspection")
 	public static Vector getScores(String nick)
 		throws IOException {
 		Vector scores = new Vector();

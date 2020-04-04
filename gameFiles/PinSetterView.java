@@ -8,7 +8,7 @@
  *   $Log$
  */
 
-/**
+/*
  *  constructs a prototype PinSetter GUI
  *
  */
@@ -21,7 +21,8 @@ import java.util.Vector;
 public class PinSetterView implements PinsetterObserver {
 
 
-    private final Vector pinVect = new Vector ( );
+    @SuppressWarnings("SpellCheckingInspection")
+	private final Vector pinVect = new Vector ( );
     private final JPanel secondRoll;
 
     /**
@@ -39,7 +40,8 @@ public class PinSetterView implements PinsetterObserver {
 
 	private final JFrame frame;
     
-    public PinSetterView ( int laneNum ) {
+    @SuppressWarnings("SpellCheckingInspection")
+	public PinSetterView (int laneNum ) {
 	
 	frame = new JFrame ( "Lane " + laneNum + ":" );
 	

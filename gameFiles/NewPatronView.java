@@ -11,7 +11,7 @@
  * 
  */
 
-/**
+/*
  * Class for GUI components need to add a patron
  *
  */

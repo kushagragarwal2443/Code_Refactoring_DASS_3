@@ -17,7 +17,7 @@
  *
  */
 
-/**
+/*
  *  Container that holds bowlers
  *
  */

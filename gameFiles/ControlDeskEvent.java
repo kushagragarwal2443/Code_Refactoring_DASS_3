@@ -8,7 +8,7 @@
  * 
  */
 
-/**
+/*
  * Class that represents control desk event
  *
  */

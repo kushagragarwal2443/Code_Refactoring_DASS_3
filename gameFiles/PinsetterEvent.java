@@ -15,6 +15,7 @@
 public class PinsetterEvent {
 
 	private final boolean[] pinsStillStanding;
+	@SuppressWarnings("SpellCheckingInspection")
 	private final boolean foulCommited;
 	private final int throwNumber;
 	private final int pinsDownThisThrow;
@@ -74,6 +75,7 @@ public class PinsetterEvent {
 	 * 
 	 * @return true if a foul was commited on the lane, false otherwise
 	 */
+	@SuppressWarnings("SpellCheckingInspection")
 	public boolean isFoulCommited() {
 		return foulCommited;
 	}

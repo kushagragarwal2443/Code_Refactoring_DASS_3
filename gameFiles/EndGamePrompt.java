@@ -1,4 +1,4 @@
-/**
+/*
  *
  * To change this generated comment edit the template variable "typecomment":
  * Window>Preferences>Java>Templates.
@@ -99,6 +99,7 @@ public class EndGamePrompt implements ActionListener {
 		return result;	
 	}
 	
+	@SuppressWarnings("SpellCheckingInspection")
 	public void distroy() {
 		win.hide();
 	}
