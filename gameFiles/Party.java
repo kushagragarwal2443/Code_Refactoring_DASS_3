@@ -27,7 +27,7 @@ import java.util.*;
 public class Party {
 
 	/** Vector of bowlers in this party */	
-    private Vector myBowlers;
+    private final Vector myBowlers;
 	
 	/**
 	 * Constructor for a Party

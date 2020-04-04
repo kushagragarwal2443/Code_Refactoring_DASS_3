@@ -16,10 +16,11 @@ import java.util.*;
 
 public class EndGameReport implements ActionListener, ListSelectionListener {
 
-	private JFrame win;
-	private JButton printButton, finished;
+	private final JFrame win;
+	private final JButton printButton;
+	private final JButton finished;
     private Vector myVector;
-	private Vector retVal;
+	private final Vector retVal;
 
 	private int result;
 

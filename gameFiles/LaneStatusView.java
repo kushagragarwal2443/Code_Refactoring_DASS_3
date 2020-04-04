@@ -12,17 +12,18 @@ import javax.swing.*;
 
 public class LaneStatusView implements ActionListener, LaneObserver, PinsetterObserver {
 
-	private JPanel jp;
+	private final JPanel jp;
 
-	private JLabel curBowler;
-    private JLabel pinsDown;
-	private JButton viewLane;
-	private JButton viewPinSetter, maintenance;
+	private final JLabel curBowler;
+    private final JLabel pinsDown;
+	private final JButton viewLane;
+	private final JButton viewPinSetter;
+	private final JButton maintenance;
 
-	private PinSetterView psv;
-	private LaneView lv;
-	private Lane lane;
-	int laneNum;
+	private final PinSetterView psv;
+	private final LaneView lv;
+	private final Lane lane;
+	final int laneNum;
 
 	boolean laneShowing;
 	boolean psShowing;

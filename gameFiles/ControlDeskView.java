@@ -22,14 +22,16 @@ import java.util.*;
 
 public class ControlDeskView implements ActionListener, ControlDeskObserver {
 
-	private JButton addParty, finished, assign;
-	private JFrame win;
-	private JList partyList;
+	private final JButton addParty;
+	private final JButton finished;
+	private final JButton assign;
+	private final JFrame win;
+	private final JList partyList;
 	
 	/** The maximum  number of members in a party */
-	private int maxMembers;
+	private final int maxMembers;
 	
-	private ControlDesk controlDesk;
+	private final ControlDesk controlDesk;
 
 	/**
 	 * Displays a GUI representation of the ControlDesk

@@ -46,16 +46,16 @@ import java.io.*;
 class ControlDesk extends Thread {
 
 	/** The collection of Lanes */
-	private HashSet lanes;
+	private final HashSet lanes;
 
 	/** The party wait queue */
-	private Queue partyQueue;
+	private final Queue partyQueue;
 
 	/** The number of lanes represented */
-	private int numLanes;
+	private final int numLanes;
 	
 	/** The collection of subscribers */
-	private Vector subscribers;
+	private final Vector subscribers;
 
     /**
      * Constructor for the ControlDesk class

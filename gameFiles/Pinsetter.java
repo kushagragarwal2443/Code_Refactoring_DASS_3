@@ -74,10 +74,10 @@ import java.util.*;
 
 public class Pinsetter {
 
-	private Random rnd;
-	private Vector subscribers;
+	private final Random rnd;
+	private final Vector subscribers;
 
-	private boolean[] pins; 
+	private final boolean[] pins;
 			/* 0-9 of state of pine, true for standing, 
 			false for knocked down
 

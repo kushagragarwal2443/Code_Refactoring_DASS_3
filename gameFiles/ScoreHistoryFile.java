@@ -11,10 +11,10 @@ import java.io.*;
 
 public class ScoreHistoryFile {
 
-	private static String SCOREHISTORY_DAT = "SCOREHISTORY.DAT";
+	private static final String SCOREHISTORY_DAT = "SCOREHISTORY.DAT";
 
 	public static void addScore(String nick, String date, String score)
-		throws IOException, FileNotFoundException {
+		throws IOException {
 
 		String data = nick + "\t" + date + "\t" + score + "\n";
 
@@ -25,7 +25,7 @@ public class ScoreHistoryFile {
 	}
 
 	public static Vector getScores(String nick)
-		throws IOException, FileNotFoundException {
+		throws IOException {
 		Vector scores = new Vector();
 
 		BufferedReader in =
