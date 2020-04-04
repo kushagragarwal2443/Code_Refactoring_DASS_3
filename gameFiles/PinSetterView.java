@@ -23,7 +23,6 @@ public class PinSetterView implements PinsetterObserver {
 
 
     private Vector pinVect = new Vector ( );
-    private JPanel firstRoll;
     private JPanel secondRoll;
 
     /**
@@ -54,14 +53,14 @@ public class PinSetterView implements PinsetterObserver {
 	//********************Top of GUI indicates first or second roll
 	
 	JPanel top = new JPanel ( );
-	
-	firstRoll = new JPanel ( );
+
+        JPanel firstRoll = new JPanel();
 	firstRoll.setBackground( Color.yellow );
 	
 	secondRoll = new JPanel ( );
 	secondRoll.setBackground ( Color.black );
 	
-	top.add ( firstRoll, BorderLayout.WEST );
+	top.add (firstRoll, BorderLayout.WEST );
 	
 	top.add ( secondRoll, BorderLayout.EAST );
 	
