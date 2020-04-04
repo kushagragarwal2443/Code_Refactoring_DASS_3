@@ -104,10 +104,10 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 	
 	public void actionPinSetterView() {
 		
-		if ( psShowing == false ) {
+		if (!psShowing) {
 			psv.show();
 			psShowing=true;
-		} else if ( psShowing == true ) {
+		} else if (psShowing) {
 			psv.hide();
 			psShowing=false;
 		}
@@ -116,10 +116,10 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 	
 	public void actionViewLane() {
 		
-		if ( laneShowing == false ) {
+		if (!laneShowing) {
 			lv.show();
 			laneShowing=true;
-		} else if ( laneShowing == true ) {
+		} else if (laneShowing) {
 			lv.hide();
 			laneShowing=false;
 		}
@@ -150,7 +150,7 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 		if ( le.isMechanicalProblem() ) {
 			maintenance.setBackground( Color.RED );
 		}	
-		if ( lane.isPartyAssigned() == false ) {
+		if (!lane.isPartyAssigned()) {
 			viewLane.setEnabled( false );
 			viewPinSetter.setEnabled( false );
 		} else {

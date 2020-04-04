@@ -329,7 +329,7 @@ public class Lane extends Thread implements PinsetterObserver {
 						}
 					}
 				
-					if ((pe.totalPinsDown() != 10) && (pe.getThrowNumber() == 2 && tenthFrameStrike == false)) {
+					if ((pe.totalPinsDown() != 10) && (pe.getThrowNumber() == 2 && !tenthFrameStrike)) {
 						canThrowAgain = false;
 						//publish( lanePublish() );
 					}
@@ -434,7 +434,7 @@ public class Lane extends Thread implements PinsetterObserver {
 		
 		int flaghalt = 0;
 		
-		if(gameIsHalted == true) {
+		if(gameIsHalted) {
 			flaghalt = 1;
 		}
 		
