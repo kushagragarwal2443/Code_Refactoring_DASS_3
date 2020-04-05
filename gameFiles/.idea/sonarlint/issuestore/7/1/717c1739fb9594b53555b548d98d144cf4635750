@@ -1,0 +1,30 @@
+
+U
+java:S1155»">Use isEmpty() to check whether the collection is empty or not.(Ø¿‘—
+u
+java:S4144ù"YUpdate this method so that its implementation is not identical to "getNames" on line 215.( çÅâùÿÿÿÿ
+G
+java:S1659:",Declare "selectedMember" on a separate line.(’ÖÌşşÿÿÿÿ
+n	java:S1165"TRename this field "bowler_db" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©šÿäúÿÿÿÿ
+S	java:S106a"9Replace this use of System.out or System.err by a logger.(‹¢º²şÿÿÿÿ
+o
+java:S3252i"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(á™şÿ
+H
+java:S1874",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ
+i	java:S100¢"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş”Ş¼ÿÿÿÿÿ
+N	java:S106¦"9Replace this use of System.out or System.err by a logger.(åÓ®R
+Y
+java:S1854¸"=Remove this useless assignment to local variable "newPatron".(ËÃ»€şÿÿÿÿ
+Y
+java:S1117¸"=Rename "newPatron" which hides the field declared at line 47.(ËÃ»€şÿÿÿÿ
+H
+java:S1874¾",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ
+O	java:S106î"9Replace this use of System.out or System.err by a logger.(îóœ¯
+O	java:S106ñ"9Replace this use of System.out or System.err by a logger.(ÅŞ·
+L
+java:S1481q"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙıÿÿÿÿ
+J
+java:S1481¸".Remove this unused "newPatron" local variable.(ËÃ»€şÿÿÿÿ
+C
+java:S10686"(Remove this unused "lock" private field.(İá«´úÿÿÿÿ
+V	java:S125V"<This block of commented-out lines of code should be removed.(ŞÿßÉúÿÿÿÿ

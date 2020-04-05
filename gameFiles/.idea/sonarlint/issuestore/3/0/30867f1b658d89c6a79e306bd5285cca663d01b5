@@ -1,0 +1,54 @@
+
+^
+java:S3973¯"GUse indentation to denote the code conditionally executed by this "if".(˜üÅ¨
+K
+java:S1066"/Merge this if statement with the enclosing one.(ç†ÅÃøÿÿÿÿ
+K
+java:S1066š"/Merge this if statement with the enclosing one.(Ç€µ ùÿÿÿÿ
+Z
+java:S1155Ó">Use isEmpty() to check whether the collection is empty or not.(ˆ²Èıùÿÿÿÿ
+l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨±‡´ÿÿÿÿÿ
+g	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç—
+U
+java:S4973Ê"9Use the "equals" method if value comparison was intended.(¿”¤óÿÿÿÿÿ
+
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(°î®Úşÿÿÿÿ
+|
+java:S1149Š"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Â›Ëƒ
+i	java:S100À"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö‘Ö‰ûÿÿÿÿ
+G
+java:S1874Ã"0Remove this use of "getHours"; it is deprecated.(òº†
+I
+java:S1874Ã"2Remove this use of "getMinutes"; it is deprecated.(òº†
+G
+java:S1874Ã"0Remove this use of "getMonth"; it is deprecated.(òº†
+E
+java:S1874Ã".Remove this use of "getDay"; it is deprecated.(òº†
+F
+java:S1874Ã"/Remove this use of "getYear"; it is deprecated.(òº†
+T	java:S106Å"9Replace this use of System.out or System.err by a logger.(±¤–ôúÿÿÿÿ
+i	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôâöüúÿÿÿÿ
+O	java:S106Ë"9Replace this use of System.out or System.err by a logger.(¤Çú›
+S
+java:S1854ÿ"7Remove this useless assignment to local variable "egp".(«Î‰ÿÿÿÿÿ
+Q
+java:S1161Ñ":Add the "@Override" annotation above this method signature(“–ış
+i
+java:S3776Ñ"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(“–ış
+D	java:S108Ú")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ
+O	java:S106‚"9Replace this use of System.out or System.err by a logger.(¯àÅ…
+I
+java:S1135„"2Complete the task associated to this TODO comment.(±•ó½
+D	java:S108£")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ
+T	java:S106°"9Replace this use of System.out or System.err by a logger.(”ßÇ’úÿÿÿÿ
+n
+java:S3776¾"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¤µ–«úÿÿÿÿ
+i
+java:S3776È"RRefactor this method to reduce its Cognitive Complexity from 82 to the 15 allowed.(ç—
+d
+java:S1871å"MThis branch's code block is the same as the block for the branch on line 482.(”—¡¼
+W	java:S125«"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ
+W	java:S125®"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ
+W	java:S125Ï"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ
+W	java:S125Ô"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ
+R	java:S125Ú"<This block of commented-out lines of code should be removed.(åª„“
