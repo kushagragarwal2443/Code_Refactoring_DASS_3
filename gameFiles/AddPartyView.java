@@ -51,7 +51,6 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 	private final JList allBowlers;
 	private final Vector party;
 	private Vector bowler_db;
-	private Integer lock;
 
 	private final ControlDeskView controlDesk;
 
@@ -83,7 +82,6 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 		partyList.setVisibleRowCount(5);
 		partyList.addListSelectionListener(this);
 		JScrollPane partyPane = new JScrollPane(partyList);
-		//        partyPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		partyPanel.add(partyPane);
 
 		// Bowler Database
@@ -206,14 +204,6 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 			selectedMember =
 				((String) ((JList) e.getSource()).getSelectedValue());
 		}
-	}
-
-/**
- * Accessor for Party
- */
-
-	public Vector getNames() {
-		return party;
 	}
 
 /**
