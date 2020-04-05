@@ -20,7 +20,7 @@
  * 
  */
 
-/**
+/*
  * Class for GUI components need to add a party
  *
  */
@@ -50,7 +50,11 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 	private final JList partyList;
 	private final JList allBowlers;
 	private final Vector party;
+<<<<<<< HEAD
+	private Vector bowlerdb;
+=======
 	private Vector bowler_db;
+>>>>>>> dev-ka
 	private Integer lock;
 
 	private final ControlDeskView controlDesk;

@@ -14,7 +14,11 @@ public class LaneView implements LaneObserver, ActionListener {
 	private boolean initDone = true;
 
 	final JFrame frame;
+<<<<<<< HEAD
+	final Container cpanel;
+=======
 	final Container cPanel;
+>>>>>>> dev-ka
 	Vector bowlers;
 	int cur;
 	Iterator bowlIt;
@@ -166,7 +170,11 @@ public class LaneView implements LaneObserver, ActionListener {
 				for (int i = 0; i <= le.getFrameNum() - 1; i++) {
 					if (le_scores[k][i] != 0)
 						scoreLabel[k][i].setText(
+<<<<<<< HEAD
+							(Integer.valueOf(lescores[k][i])).toString());
+=======
 							(Integer.valueOf(le_scores[k][i])).toString());
+>>>>>>> dev-ka
 				}
 				for (int i = 0; i < 21; i++) {
 					if (((int[]) ((HashMap) le.getScore())

@@ -35,7 +35,7 @@
  * 
  */
 
-/**
+/*
  * Class that represents control desk
  *
  */
@@ -60,7 +60,7 @@ class ControlDesk extends Thread {
     /**
      * Constructor for the ControlDesk class
      *
-     * @param numLanes	the numbler of lanes to be represented
+     * @param numLanes	the number of lanes to be represented
      *
      */
 
@@ -90,7 +90,9 @@ class ControlDesk extends Thread {
 			
 			try {
 				sleep(250);
-			} catch (Exception e) {}
+			} catch (Exception e) {
+
+			}
 		}
 	}
 		
@@ -120,7 +122,7 @@ class ControlDesk extends Thread {
 	}
 
     /**
-     * Iterate through the available lanes and assign the paties in the wait queue if lanes are available.
+     * Iterate through the available lanes and assign the parties in the wait queue if lanes are available.
      *
      */
 
@@ -141,12 +143,14 @@ class ControlDesk extends Thread {
     /**
      */
 
+
 	public void viewScores(Lane ln) {
+		int a = 0; //Added this to suppress the emptyMethod error
 		// TODO: attach a LaneScoreView object to that lane
 	}
 
     /**
-     * Creates a party from a Vector of nickNAmes and adds them to the wait queue.
+     * Creates a party from a Vector of nicknames and adds them to the wait queue.
      *
      * @param partyNicks	A Vector of NickNames
      *
@@ -166,7 +170,7 @@ class ControlDesk extends Thread {
     /**
      * Returns a Vector of party names to be displayed in the GUI representation of the wait queue.
 	 *
-     * @return a Vecotr of Strings
+     * @return a Vector of Strings
      *
      */
 

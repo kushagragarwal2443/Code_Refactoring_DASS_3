@@ -21,7 +21,12 @@ import java.util.Vector;
 public class PinSetterView implements PinsetterObserver {
 
 
+<<<<<<< HEAD
     private final Vector pinVect = new Vector ( );
+=======
+    @SuppressWarnings("SpellCheckingInspection")
+	private final Vector pinVect = new Vector ( );
+>>>>>>> dev-ka
     private final JPanel secondRoll;
 
     /**
@@ -39,7 +44,8 @@ public class PinSetterView implements PinsetterObserver {
 
 	private final JFrame frame;
     
-    public PinSetterView ( int laneNum ) {
+    @SuppressWarnings("SpellCheckingInspection")
+	public PinSetterView (int laneNum ) {
 	
 	frame = new JFrame ( "Lane " + laneNum + ":" );
 	

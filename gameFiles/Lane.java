@@ -136,7 +136,8 @@ import java.util.Iterator;
 import java.util.HashMap;
 import java.util.Date;
 
-public class Lane extends Thread implements PinsetterObserver {	
+@SuppressWarnings("SpellCheckingInspection")
+public class Lane extends Thread implements PinsetterObserver {
 	private Party party;
 	private final Pinsetter setter;
 	private final HashMap scores;
@@ -451,7 +452,8 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * 
 	 * @return			The bowlers total score
 	 */
-	private int getScore( Bowler Cur, int frame) {
+	@SuppressWarnings("UnusedReturnValue")
+	private int getScore(Bowler Cur, int frame) {
 		int[] curScore;
 		int strikeballs = 0;
 		int totalScore = 0;

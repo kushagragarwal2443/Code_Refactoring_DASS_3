@@ -1,4 +1,4 @@
-/**
+/*
  *
  * To change this generated comment edit the template variable "typecomment":
  * Window>Preferences>Java>Templates.
@@ -131,6 +131,7 @@ public class EndGameReport implements ActionListener, ListSelectionListener {
 	public static void main(String[] args) {
 		Vector bowlers = new Vector();
 		for ( int i=0; i<4; i++ ) {
+			// noinspection SpellCheckingInspection
 			bowlers.add( new Bowler( "aaaaa", "aaaaa", "aaaaa" ) );
 		}
 		Party party = new Party( bowlers );

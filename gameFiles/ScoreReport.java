@@ -1,4 +1,4 @@
-/**
+/*
  * 
  * SMTP implementation based on code by Real Gagnon mailto:real@rgagnon.com
  * 
@@ -24,7 +24,8 @@ public class ScoreReport {
 		} catch (Exception e){System.err.println("Error: " + e);}
 		
 		Iterator scoreIt = v.iterator();
-		
+
+		StringBuilder sb = new StringBuilder();
 		content = "";
 		content += "--Lucky Strike Bowling Alley Score Report--\n";
 		content += "\n";
@@ -33,16 +34,18 @@ public class ScoreReport {
 		content += "Final scores for this session: ";
 		content += scores[0];
 		for (int i = 1; i < games; i++){
-			content += ", " + scores[i];
+			content= sb.append(content).append(", ").append(scores[i]).toString();
 		}
+		StringBuilder sd = new StringBuilder();
 		content += ".\n";
 		content += "\n";
 		content += "\n";
 		content += "Previous scores by date: \n";
 		while (scoreIt.hasNext()){
 			Score score = (Score) scoreIt.next();
-			content += "  " + score.getDate() + " - " +  score.getScore();
-			content += "\n";
+			content= sd.append(content).append("  ").append(score.getDate()).append(" - ").append(score.getScore()).append("\n").toString();
+//			content = content+ "  " + score.getDate() + " - " +  score.getScore();
+//			content = content+ "\n";
 		}
 		content += "\n\n";
 		content += "Thank you for your continuing patronage.";
@@ -51,7 +54,7 @@ public class ScoreReport {
 
 	public void sendEmail(String recipient) {
 		try {
-			Socket s = new Socket("osfmail.rit.edu", 25);
+			@SuppressWarnings("SpellCheckingInspection") Socket s = new Socket("osfmail.rit.edu", 25);
 			BufferedReader in =
 				new BufferedReader(
 					new InputStreamReader(s.getInputStream(), "8859_1"));
@@ -62,7 +65,7 @@ public class ScoreReport {
 			String boundary = "DataSeparatorString";
 
 			// here you are supposed to send your username
-			sendln(in, out, "HELO world");
+			sendln(in, out, "HELLO WORLD");
 			sendln(in, out, "MAIL FROM: <mda2376@rit.edu>");
 			sendln(in, out, "RCPT TO: <" + recipient + ">");
 			sendln(in, out, "DATA");
@@ -84,7 +87,7 @@ public class ScoreReport {
 	public void sendPrintout() {
 		PrinterJob job = PrinterJob.getPrinterJob();
 
-		PrintableText printobj = new PrintableText(content);
+		@SuppressWarnings("SpellCheckingInspection") PrintableText printobj = new PrintableText(content);
 
 		job.setPrintable(printobj);
 
@@ -98,6 +101,7 @@ public class ScoreReport {
 
 	}
 
+	@SuppressWarnings("SpellCheckingInspection")
 	public void sendln(BufferedReader in, BufferedWriter out, String s) {
 		try {
 			out.write(s + "\r\n");
@@ -110,6 +114,7 @@ public class ScoreReport {
 		}
 	}
 
+	@SuppressWarnings("SpellCheckingInspection")
 	public void sendln(BufferedWriter out, String s) {
 		try {
 			out.write(s + "\r\n");

@@ -8,7 +8,7 @@
  * 
  */
 
-/**
+/*
  * Class for representation of the control desk
  *
  */
