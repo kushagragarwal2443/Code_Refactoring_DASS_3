@@ -10,7 +10,6 @@ import java.util.*;
 
 public class LaneView implements LaneObserver, ActionListener {
 
-	private int roll;
 	private boolean initDone = true;
 
 	final JFrame frame;
@@ -39,6 +38,7 @@ public class LaneView implements LaneObserver, ActionListener {
 		cPanel.setLayout(new BorderLayout());
 
 		frame.addWindowListener(new WindowAdapter() {
+			@Override
 			public void windowClosing(WindowEvent e) {
 				frame.hide();
 			}
@@ -103,7 +103,7 @@ public class LaneView implements LaneObserver, ActionListener {
 			pins[i] = new JPanel();
 			pins[i].setBorder(
 				BorderFactory.createTitledBorder(
-					((Bowler) bowlers.get(i)).getNick()));
+					((Bowler) bowlers.get(i)).getNickName()));
 			pins[i].setLayout(new GridLayout(0, 10));
 			for (int k = 0; k != 10; k++) {
 				scores[i][k] = new JPanel();
@@ -126,7 +126,6 @@ public class LaneView implements LaneObserver, ActionListener {
 		if (lane.isPartyAssigned()) {
 			int numBowlers = le.getParty().getMembers().size();
 			while (!initDone) {
-				//System.out.println("chillin' here.");
 				try {
 					Thread.sleep(1);
 				} catch (Exception e) {
@@ -185,16 +184,17 @@ public class LaneView implements LaneObserver, ActionListener {
 										.get(bowlers.get(k)))[i
 									- 1]
 									== 10
-								&& i % 2 == 1)
+								&& i % 2 == 1) {
 							ballLabel[k][i].setText("/");
+						}
 						else if ( ((int[])((HashMap) le.getScore()).get(bowlers.get(k)))[i] == -2 ){
 							
 							ballLabel[k][i].setText("F");
 						} else
-							ballLabel[k][i].setText(
-								(Integer.valueOf(((int[]) ((HashMap) le.getScore())
-										.get(bowlers.get(k)))[i]))
-									.toString());
+								ballLabel[k][i].setText(
+									(Integer.valueOf(((int[]) ((HashMap) le.getScore())
+											.get(bowlers.get(k)))[i]))
+										.toString());
 				}
 			}
 

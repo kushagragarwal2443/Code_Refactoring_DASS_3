@@ -16,7 +16,7 @@ public class ScoreReport {
 	private String content;
 	
 	public ScoreReport( Bowler bowler, int[] scores, int games ) {
-		String nick = bowler.getNick();
+		String nick = bowler.getNickName();
 		String full = bowler.getFullName();
 		Vector v = null;
 		try{
@@ -44,7 +44,6 @@ public class ScoreReport {
 		while (scoreIt.hasNext()){
 			Score score = (Score) scoreIt.next();
 			content= sd.append(content).append("  ").append(score.getDate()).append(" - ").append(score.getScore()).append("\n").toString();
-//			content = content+ "  " + score.getDate() + " - " +  score.getScore();
 //			content = content+ "\n";
 		}
 		content += "\n\n";
@@ -106,9 +105,7 @@ public class ScoreReport {
 		try {
 			out.write(s + "\r\n");
 			out.flush();
-			// System.out.println(s);
 			s = in.readLine();
-			// System.out.println(s);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

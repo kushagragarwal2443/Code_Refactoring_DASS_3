@@ -193,14 +193,14 @@ public class Lane extends Thread implements PinsetterObserver {
 		try{
 			Date date = new Date();
 			String dateString = "" + date.getHours() + ":" + date.getMinutes() + " " + date.getMonth() + "/" + date.getDay() + "/" + (date.getYear() + 1900);
-			ScoreHistoryFile.addScore(currentThrower.getNick(), dateString, Integer.toString(cumulScores[bowlIndex][9]));
+			ScoreHistoryFile.addScore(currentThrower.getNickName(), dateString, Integer.toString(cumulScores[bowlIndex][9]));
 		} catch (Exception e) {System.err.println("Exception in addScore. "+ e );}
 	}
 	
 	public void run_print(ScoreReport sr, Iterator printIt, Bowler thisBowler) {
 		
-		while (printIt.hasNext() && (thisBowler.getNick() == (String)printIt.next())){
-			System.out.println("Printing " + thisBowler.getNick());
+		while (printIt.hasNext() && (thisBowler.getNickName().equals(printIt.next()))){
+			System.out.println("Printing " + thisBowler.getNickName());
 			sr.sendPrintout();
 		}
 		
