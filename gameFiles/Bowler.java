@@ -51,16 +51,16 @@ public class Bowler {
 	}
 	
 	public boolean bowlerEquals ( Bowler b) {
-		boolean return_value = true;
+		boolean returnValue = true;
 		if ( !(nickName.equals(b.getNickName())) ) {
-				return_value = false;
+				returnValue = false;
 		}
 		if ( !(fullName.equals(b.getFullName())) ) {
-			    return_value = false;
+			    returnValue = false;
 		}	
 		if ( !(email.equals(b.getEmail())) ) {
-			    return_value = false;
+			    returnValue = false;
 		}
-		return return_value;
+		return returnValue;
 	}
 }

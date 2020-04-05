@@ -8,6 +8,7 @@ c) GetNames is similar to GetParty function and getNames is redundant so removed
 2)<b>Bowler</b> : <br>
 a) Removed getNick function it was similar to getNickName and fixed the corresponding places with appropriate function<br>
 b) Renamed equal function to prevent confusion <br>
+c) Renamed variable to make in complaince with Regex <br>
 
 3)<b>ScoreReport</b> : <br>
 a)  Removed Commendted Out Code for Better Readability<br>
