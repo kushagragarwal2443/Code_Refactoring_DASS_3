@@ -1,0 +1,5 @@
+
+‡
+java:S1149N"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(°î®Úşÿÿÿÿ8ÄÎÿÒ”.
+F	java:S108˜")Either remove or fill this block of code.(”ı¾8ÄÎÿÒ”.
+K	java:S108°")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ8ÄÎÿÒ”.

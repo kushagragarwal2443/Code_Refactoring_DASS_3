@@ -1,0 +1,30 @@
+
+V	java:S106ñ"9Replace this use of System.out or System.err by a logger.(ÅŞ·8ÂøÏÒ”.
+V	java:S106î"9Replace this use of System.out or System.err by a logger.(îóœ¯8ÂøÏÒ”.
+|
+java:S4144ù"YUpdate this method so that its implementation is not identical to "getNames" on line 215.( çÅâùÿÿÿÿ8ÂøÏÒ”.
+\
+java:S1155»">Use isEmpty() to check whether the collection is empty or not.(Ø¿‘—8‘·ÿÒ”.
+N
+java:S1659:",Declare "selectedMember" on a separate line.(’ÖÌşşÿÿÿÿ8‘·ÿÒ”.
+u	java:S1165"TRename this field "bowler_db" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©šÿäúÿÿÿÿ8‘·ÿÒ”.
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(‹¢º²şÿÿÿÿ8‘·ÿÒ”.
+v
+java:S3252i"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(á™şÿ8‘·ÿÒ”.
+O
+java:S1874",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ8‘·ÿÒ”.
+p	java:S100¢"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş”Ş¼ÿÿÿÿÿ8‘·ÿÒ”.
+U	java:S106¦"9Replace this use of System.out or System.err by a logger.(åÓ®R8‘·ÿÒ”.
+`
+java:S1854¸"=Remove this useless assignment to local variable "newPatron".(ËÃ»€şÿÿÿÿ8‘·ÿÒ”.
+`
+java:S1117¸"=Rename "newPatron" which hides the field declared at line 47.(ËÃ»€şÿÿÿÿ8‘·ÿÒ”.
+O
+java:S1874¾",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ8‘·ÿÒ”.
+S
+java:S1481q"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙıÿÿÿÿ8‘·ÿÒ”.
+Q
+java:S1481¸".Remove this unused "newPatron" local variable.(ËÃ»€şÿÿÿÿ8‘·ÿÒ”.
+J
+java:S10686"(Remove this unused "lock" private field.(İá«´úÿÿÿÿ8‘·ÿÒ”.
+]	java:S125V"<This block of commented-out lines of code should be removed.(ŞÿßÉúÿÿÿÿ8‘·ÿÒ”.

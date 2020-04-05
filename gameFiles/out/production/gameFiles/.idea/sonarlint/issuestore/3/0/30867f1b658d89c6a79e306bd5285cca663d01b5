@@ -1,0 +1,54 @@
+
+R	java:S125Ú"<This block of commented-out lines of code should be removed.(åª„“
+K
+java:S1066"/Merge this if statement with the enclosing one.(ç†ÅÃøÿÿÿÿ
+g	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç—
+K
+java:S1066š"/Merge this if statement with the enclosing one.(Ç€µ ùÿÿÿÿ
+Z
+java:S1155Ó">Use isEmpty() to check whether the collection is empty or not.(ˆ²Èıùÿÿÿÿ
+d
+java:S1871å"MThis branch's code block is the same as the block for the branch on line 482.(”—¡¼
+e
+java:S3973¯"GUse indentation to denote the code conditionally executed by this "if".(˜üÅ¨8›àÿÒ”.
+s	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨±‡´ÿÿÿÿÿ8›àÿÒ”.
+\
+java:S4973Ê"9Use the "equals" method if value comparison was intended.(¿”¤óÿÿÿÿÿ8›àÿÒ”.
+ˆ
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(°î®Úşÿÿÿÿ8›àÿÒ”.
+ƒ
+java:S1149Š"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Â›Ëƒ8›àÿÒ”.
+p	java:S100À"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö‘Ö‰ûÿÿÿÿ8›àÿÒ”.
+N
+java:S1874Ã"0Remove this use of "getHours"; it is deprecated.(òº†8›àÿÒ”.
+P
+java:S1874Ã"2Remove this use of "getMinutes"; it is deprecated.(òº†8›àÿÒ”.
+N
+java:S1874Ã"0Remove this use of "getMonth"; it is deprecated.(òº†8›àÿÒ”.
+L
+java:S1874Ã".Remove this use of "getDay"; it is deprecated.(òº†8›àÿÒ”.
+M
+java:S1874Ã"/Remove this use of "getYear"; it is deprecated.(òº†8›àÿÒ”.
+[	java:S106Å"9Replace this use of System.out or System.err by a logger.(±¤–ôúÿÿÿÿ8›àÿÒ”.
+p	java:S100È"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôâöüúÿÿÿÿ8›àÿÒ”.
+V	java:S106Ë"9Replace this use of System.out or System.err by a logger.(¤Çú›8›àÿÒ”.
+Z
+java:S1854ÿ"7Remove this useless assignment to local variable "egp".(«Î‰ÿÿÿÿÿ8›àÿÒ”.
+X
+java:S1161Ñ":Add the "@Override" annotation above this method signature(“–ış8›àÿÒ”.
+p
+java:S3776Ñ"RRefactor this method to reduce its Cognitive Complexity from 39 to the 15 allowed.(“–ış8›àÿÒ”.
+K	java:S108Ú")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ8›àÿÒ”.
+V	java:S106‚"9Replace this use of System.out or System.err by a logger.(¯àÅ…8›àÿÒ”.
+P
+java:S1135„"2Complete the task associated to this TODO comment.(±•ó½8›àÿÒ”.
+K	java:S108£")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ8›àÿÒ”.
+[	java:S106°"9Replace this use of System.out or System.err by a logger.(”ßÇ’úÿÿÿÿ8›àÿÒ”.
+u
+java:S3776¾"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¤µ–«úÿÿÿÿ8›àÿÒ”.
+p
+java:S3776È"RRefactor this method to reduce its Cognitive Complexity from 82 to the 15 allowed.(ç—8›àÿÒ”.
+^	java:S125«"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8›àÿÒ”.
+^	java:S125®"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8›àÿÒ”.
+^	java:S125Ï"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8›àÿÒ”.
+^	java:S125Ô"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8›àÿÒ”.

@@ -1,0 +1,14 @@
+
+R
+java:S1854Ø"6Remove this useless assignment to local variable "pg".(‚“«øÿÿÿÿ
+C
+java:S1481Ø"'Remove this unused "pg" local variable.(‚“«øÿÿÿÿ
+‚
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¢áÇ¥8î°ÿÒ”.
+^
+java:S1854»";Remove this useless assignment to local variable "tempPin".(Øò°Ïùÿÿÿÿ8î°ÿÒ”.
+O
+java:S1874Ğ",Remove this use of "show"; it is deprecated.(Öø±İúÿÿÿÿ8î°ÿÒ”.
+O
+java:S1874Ô",Remove this use of "hide"; it is deprecated.(ºŠ˜şÿÿÿÿ8î°ÿÒ”.
+Y	java:S125ª"<This block of commented-out lines of code should be removed.(ŞÎ¼°8î°ÿÒ”.
