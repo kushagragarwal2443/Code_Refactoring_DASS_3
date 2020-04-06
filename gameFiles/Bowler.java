@@ -44,23 +44,26 @@ public class Bowler {
 	public String getFullName ( ) {
 			return fullName;
 	}
-
+	
+	public String getNick ( ) {
+		return nickName;
+	}
 
 	public String getEmail ( ) {
 		return email;	
 	}
 	
-	public boolean bowlerEquals ( Bowler b) {
-		boolean returnValue = true;
+	public boolean equals ( Bowler b) {
+		boolean retval = true;
 		if ( !(nickName.equals(b.getNickName())) ) {
-				returnValue = false;
+				retval = false;
 		}
 		if ( !(fullName.equals(b.getFullName())) ) {
-			    returnValue = false;
+				retval = false;
 		}	
 		if ( !(email.equals(b.getEmail())) ) {
-			    returnValue = false;
+				retval = false;
 		}
-		return returnValue;
+		return retval;
 	}
 }

@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/AddPartyView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Bowler.java">
           <value>
             <set />
@@ -28,12 +33,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/LaneEvent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/LaneView.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/Pinsetter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ScoreReport.java">
           <value>
             <set />
           </value>

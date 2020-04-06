@@ -3,7 +3,37 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/AddPartyView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Bowler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/BowlerFile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ControlDesk.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/EndGamePrompt.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Lane.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/LaneEvent.java">
           <value>
             <set />
           </value>
@@ -13,7 +43,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/Pinsetter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/README.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/ScoreReport.java">
           <value>
             <set />
           </value>
