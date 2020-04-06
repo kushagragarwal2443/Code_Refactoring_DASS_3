@@ -196,7 +196,7 @@ public class Lane extends Thread implements PinsetterObserver {
 				while (gameIsHalted) {
 					try {
 						sleep(10);
-					} catch (Exception e) {}
+					} catch (Exception e) {;}
 				}
 
 
@@ -321,11 +321,12 @@ public class Lane extends Thread implements PinsetterObserver {
 					if (pe.pinsDownOnThisThrow() == 10) {		// threw a strike
 						canThrowAgain = false;
 						//publish( lanePublish() );
-					} else if (pe.getThrowNumber() == 2) {
-						canThrowAgain = false;
-						//publish( lanePublish() );
-					} else if (pe.getThrowNumber() == 3)  
-						System.out.println("I'm here...");
+					} else
+						if (pe.getThrowNumber() == 2) {
+							canThrowAgain = false;
+							//publish( lanePublish() );
+					} else
+						if (pe.getThrowNumber() == 3) System.out.println("I'm here...");
 				}
 			} else {								//  this is not a real throw, probably a reset
 			}
@@ -520,10 +521,8 @@ public class Lane extends Thread implements PinsetterObserver {
 						}	
 					}
 				} else if (i < 18){ 
-					if(curScore[i] != -1 && i > 2){
-						if(curScore[i] != -2){
+					if(curScore[i] != -1 && i > 2 && curScore[i] != -2){
 							cumulScores[bowlIndex][i/2] += curScore[i];
-						}
 					}
 				}
 				if (i/2 == 9){
@@ -533,10 +532,8 @@ public class Lane extends Thread implements PinsetterObserver {
 					if(curScore[i] != -2){
 						cumulScores[bowlIndex][9] += curScore[i];
 					}
-				} else if (i/2 == 10) {
-					if(curScore[i] != -2){
+				} else if (i/2 == 10 && curScore[i] != -2) {
 						cumulScores[bowlIndex][9] += curScore[i];
-					}
 				}
 			}
 		}
