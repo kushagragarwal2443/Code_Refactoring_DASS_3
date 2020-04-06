@@ -83,6 +83,7 @@ class ControlDesk extends Thread {
 	 * Main loop for ControlDesk's thread
 	 * 
 	 */
+	@Override
 	public void run() {
 		while (true) {
 			
@@ -91,7 +92,7 @@ class ControlDesk extends Thread {
 			try {
 				sleep(250);
 			} catch (Exception e) {
-
+				System.out.println(e);
 			}
 		}
 	}
