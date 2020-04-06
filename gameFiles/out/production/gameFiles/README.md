@@ -30,3 +30,6 @@ a) Added Override annotation to the run function to prevent confusion<br>
 7)<b>EndGame </b> : <br>
 a) Restarted thread in catch block if interrupt was received by thread<br>
 
+7)<b>ScoreHistory </b> : <br>
+a) Implemented all file reading in catch block to prevent the interrupts caused to pipe reading issues.<br>
+b) Add private Instructor to hide public one (SingleTon Design Pattern).
