@@ -11,15 +11,22 @@ b) Renamed equal function to prevent confusion <br>
 c) Renamed variable to make in complaince with Regex <br>
 
 3)<b>ScoreReport</b> : <br>
-a)  Removed Commendted Out Code for Better Readability<br>
+a)  Removed Commented Out Code for Better Readability<br>
 
 4)<b>Lane</b> : <br>
-a)  Removed string comparison using "==" becuase it causes errors sometimes and removed unnecessary type casting<br>
-b) Removed Commendted Out Code for Better Readability<br>
+a)  Removed string comparison using "==" because it causes errors sometimes and removed unnecessary type casting<br>
+b) Removed Commented Out Code for Better Readability<br>
 c) Added @Override annotation to the function<br>
-d) Added Braces to avoid Dangling else
+d) Added Braces to avoid Dangling else<br>
+e) Reduced complexity of receivePinsetterEvent by merging condition having same objective<br>
 
 5)<b>BowlerFile</b> : <br>
 a) Implemented BufferRead with try catch block<br>
 b) Implemented RandomAccessFile with try catch block<br>
-c) 
+
+6)<b>ControlDesk</b> : <br>
+a) Added Override annotation to the run function to prevent confusion<br>
+
+7)<b>EndGame </b> : <br>
+a) Restarted thread in catch block if interrupt was received by thread<br>
+

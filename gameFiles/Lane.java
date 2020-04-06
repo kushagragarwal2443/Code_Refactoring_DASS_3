@@ -197,7 +197,7 @@ public class Lane extends Thread implements PinsetterObserver {
 		} catch (Exception e) {System.err.println("Exception in addScore. "+ e );}
 	}
 	
-	public void run_print(ScoreReport sr, Iterator printIt, Bowler thisBowler) {
+	public void vectorPrint(ScoreReport sr, Iterator printIt, Bowler thisBowler) {
 		
 		while (printIt.hasNext() && (thisBowler.getNickName().equals(printIt.next()))){
 			System.out.println("Printing " + thisBowler.getNickName());
@@ -279,8 +279,7 @@ public class Lane extends Thread implements PinsetterObserver {
 						ScoreReport sr = new ScoreReport( thisBowler, finalScores[myIndex++], gameNumber );
 						sr.sendEmail(thisBowler.getEmail());
 						Iterator printIt = printVector.iterator();
-						run_print(sr, printIt, thisBowler);
-
+						vectorPrint(sr, printIt, thisBowler);
 					}
 				}
 			}
@@ -300,8 +299,9 @@ public class Lane extends Thread implements PinsetterObserver {
 		} else if (pe.getThrowNumber() == 2) {
 			canThrowAgain = false;
 			//publish( lanePublish() );
-		} else if (pe.getThrowNumber() == 3)  
+		} else if (pe.getThrowNumber() == 3) {
 			System.out.println("I'm here...");
+		}
 		
 	}
 	
@@ -316,7 +316,8 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * 
 	 */
 	public void receivePinsetterEvent(PinsetterEvent pe) {
-		
+
+
 			if (pe.pinsDownOnThisThrow() >=  0) {			// this is a real throw
 				markScore(currentThrower, frameNumber + 1, pe.getThrowNumber(), pe.pinsDownOnThisThrow());
 	
@@ -330,19 +331,13 @@ public class Lane extends Thread implements PinsetterObserver {
 						}
 					}
 				
-					if ((pe.totalPinsDown() != 10) && (pe.getThrowNumber() == 2 && !tenthFrameStrike)) {
-						canThrowAgain = false;
-						//publish( lanePublish() );
-					}
-				
-					if (pe.getThrowNumber() == 3) {
+					else if ((pe.getThrowNumber() == 2 && !tenthFrameStrike) || (pe.getThrowNumber() == 3)) {
 						canThrowAgain = false;
 						//publish( lanePublish() );
 					}
 				} else { // its not the 10th frame
 					pinsDownOnThrow(pe);
 				}
-			} else {								//  this is not a real throw, probably a reset
 			}
 	}
 	

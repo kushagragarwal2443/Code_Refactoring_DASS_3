@@ -17,7 +17,8 @@ a)  Removed Commented Out Code for Better Readability<br>
 a)  Removed string comparison using "==" because it causes errors sometimes and removed unnecessary type casting<br>
 b) Removed Commented Out Code for Better Readability<br>
 c) Added @Override annotation to the function<br>
-d) Added Braces to avoid Dangling else
+d) Added Braces to avoid Dangling else<br>
+e) Reduced complexity of receivePinsetterEvent by merging condition having same objective<br>
 
 5)<b>BowlerFile</b> : <br>
 a) Implemented BufferRead with try catch block<br>
