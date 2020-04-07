@@ -26,7 +26,7 @@ b) Implemented RandomAccessFile with try catch block<br>
 
 6)<b>ControlDesk</b> : <br>
 a) Added Override annotation to the run function to prevent confusion<br>
-
+b) Moved registerPatron to BowlerFile to improve cohesion <br>
 7)<b>EndGame </b> : <br>
 a) Restarted thread in catch block if interrupt was received by thread<br>
 
