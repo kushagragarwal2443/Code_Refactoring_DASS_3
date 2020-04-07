@@ -30,6 +30,13 @@ b) Moved registerPatron to BowlerFile to improve cohesion <br>
 7)<b>EndGame </b> : <br>
 a) Restarted thread in catch block if interrupt was received by thread<br>
 
-7)<b>ScoreHistory </b> : <br>
+8)<b>ScoreHistory </b> : <br>
 a) Implemented all file reading in catch block to prevent the interrupts caused to pipe reading issues.<br>
 b) Add private Instructor to hide public one (SingleTon Design Pattern).
+
+9)<b>Lane Status View </b> : <br>
+a) Removed some irrelavant branching and comments for better readability<br>
+
+10)<b>Lane Event</b> : <br>
+a) Implemeted builder design pattern created setter functions for setting the parameters for class rather than as an argument<br>
+

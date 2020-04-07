@@ -27,37 +27,45 @@ import java.util.HashMap;
 
 public class LaneEvent {
 
-	private final Party p;
+	private Party p;
 	int frame;
-	final int ball;
-	final Bowler bowler;
-	final int[][] cumulScore;
-	final HashMap score;
-	final int index;
-	final int frameNum;
-	final int[] curScores;
-	final boolean mechProb;
+	int ball;
+	Bowler bowler;
+	int[][] cumulScore;
+	HashMap score;
+	int index;
+	int frameNum;
+	int[] curScores;
+	boolean mechProb;
 	
-	public LaneEvent(Party pty, int[][] params, Bowler theBowler, int[][] theCumulScore, HashMap theScore) {
-		
+	public LaneEvent( Party pty, int[][] theCumulScore, HashMap theScore, int[] theCurScores, int theBall) {
 		p = pty;
-		index = params[0][0];
-		bowler = theBowler;
 		cumulScore = theCumulScore;
 		score = theScore;
-		curScores = params[3];
-		frameNum = params[1][0];
-		ball = params[2][0];
-
-		if(params[4][0] == 1) {
-			mechProb = true;
-		}
-
-		else {
-			mechProb = false;
-		}
+		curScores = theCurScores;
+		ball = theBall;
 	}
-	
+
+	public void setParty(Party pty){
+		p = pty;
+	}
+
+	public void setCumulScore(int[][] theCumulScore) {
+		cumulScore = theCumulScore;
+	}
+
+	public void setScore(HashMap theScore) {
+		score = theScore;
+	}
+
+	public void setCurScores(int[] theCurScores) {
+		curScores = theCurScores;
+	}
+
+	public void setBall(int theBall) {
+		ball = theBall;
+	}
+
 	public boolean isMechanicalProblem() {
 		return mechProb;
 	}
@@ -98,6 +106,22 @@ public class LaneEvent {
 	public Bowler getBowler() {
 		return bowler;
 	}
+	
+	public void setIndex(int theIndex){
+		index = theIndex;
+	}
+	
+	public void setFrameNum(int theframeNum){
+		frameNum = theframeNum;
+	}
 
+	public void setMechProb(boolean mechProblem) {
+		mechProb = mechProblem;
+	}
+
+	public void setBowler(Bowler theBowler) {
+		bowler = theBowler;
+	}
+	
 }
  

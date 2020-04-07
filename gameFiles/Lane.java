@@ -250,7 +250,7 @@ public class Lane extends Thread implements PinsetterObserver {
 					resetBowlerIterator();
 					
 				} else if (result == 2) {// no, dont want to play another game
-					ArrayList printVector;
+					Vector printVector;
 					EndGameReport egr = new EndGameReport( ((Bowler)party.getMembers().get(0)).getNickName() + "'s Party", party);
 					printVector = egr.getResult();
 					partyAssigned = false;
@@ -417,15 +417,12 @@ public class Lane extends Thread implements PinsetterObserver {
 	 * @return		The new lane event
 	 */
 	private LaneEvent lanePublish(  ) {
-		
-		int flaghalt = 0;
-		
-		if(gameIsHalted) {
-			flaghalt = 1;
-		}
-		
-		int[][] params = new int[][] {{bowlIndex}, {frameNumber+1},{ball}, curScores, {flaghalt}};
-		return new LaneEvent(party, params, currentThrower, cumulScores, scores);
+		LaneEvent laneEvent = new LaneEvent(party, cumulScores, scores, curScores, ball);
+		laneEvent.setIndex(bowlIndex);
+		laneEvent.setFrameNum(frameNumber+1);
+		laneEvent.setMechProb(gameIsHalted);
+		laneEvent.setBowler(currentThrower);
+		return laneEvent;
 	}
 
 	/** getScore()
