@@ -19,7 +19,8 @@ b) Removed Commented Out Code for Better Readability<br>
 c) Added @Override annotation to the function<br>
 d) Added Braces to avoid Dangling else<br>
 e) Reduced complexity of receivePinsetterEvent by merging condition having same objective<br>
-
+f) Reduced complexity to metrics value buy breaking them in meaningful functions <br>
+ 
 5)<b>BowlerFile</b> : <br>
 a) Implemented BufferRead with try catch block<br>
 b) Implemented RandomAccessFile with try catch block<br>
