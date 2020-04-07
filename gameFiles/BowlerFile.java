@@ -118,4 +118,30 @@ class BowlerFile {
 
 	}
 
+	/**
+	 * Retrieves a matching Bowler from the bowler database.
+	 *
+	 * @param nickName	The NickName of the Bowler
+	 *
+	 * @return a Bowler object.
+	 *
+	 */
+
+	public static Bowler registerPatron(String nickName) {
+		Bowler patron = null;
+
+		try {
+			// only one patron / nick.... no dupes, no checks
+
+			patron = getBowlerInfo(nickName);
+
+		} catch (FileNotFoundException e) {
+			System.err.println("Error..." + e);
+		} catch (IOException e) {
+			System.err.println("Error..." + e);
+		}
+
+		return patron;
+	}
+
 }

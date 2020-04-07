@@ -1,0 +1,33 @@
+
+=
+java:S2129Â"!Remove this "Integer" constructor(µ‚ì¼øÿÿÿÿ
+`
+java:S3973À"IUse indentation to denote the code conditionally executed by this "else".(ÔÍØ
+m
+java:S3776}"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(Ş×œúÿÿÿÿ
+F
+java:S1874¨"/Remove this use of "Integer"; it is deprecated.(×ÌºÔ
+{
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¹ñÎ‘
+G
+java:S18748",Remove this use of "hide"; it is deprecated.(ºŠ˜şÿÿÿÿ
+C
+java:S1068"(Remove this unused "roll" private field.(²€şÃûÿÿÿÿ
+G
+java:S1874+",Remove this use of "hide"; it is deprecated.(ºŠ˜şÿÿÿÿ
+8
+java:S2129¨"!Remove this "Integer" constructor(×ÌºÔ
+G
+java:S18744",Remove this use of "show"; it is deprecated.(Öø±İúÿÿÿÿ
+U
+java:S1161*":Add the "@Override" annotation above this method signature(†§şıÿÿÿÿ
+?	java:S108ƒ")Either remove or fill this block of code.(”ı¾
+\
+java:S1854“"@Remove this useless assignment to local variable "buttonMargin".(ÌÎÍÙıÿÿÿÿ
+H
+java:S5261³"1Add explicit curly braces to avoid dangling else.(ê³àì
+K
+java:S1874Â"/Remove this use of "Integer"; it is deprecated.(µ‚ì¼øÿÿÿÿ
+T	java:S106‹"9Replace this use of System.out or System.err by a logger.(×Šßçúÿÿÿÿ
+M
+java:S1481“"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙıÿÿÿÿ

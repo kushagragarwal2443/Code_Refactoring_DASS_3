@@ -1,0 +1,24 @@
+
+‹
+java:S1319å"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(çš8¶Æ¼•.
+U	java:S106v"9Replace this use of System.out or System.err by a logger.(ò­í§8­¸Â•.
+V	java:S106Š"9Replace this use of System.out or System.err by a logger.(ˆ˜–û8‘²Á•.
+U	java:S106x"9Replace this use of System.out or System.err by a logger.(ò­í§8­¸Â•.
+I
+java:S10687",Remove this unused "numLanes" private field.(Ù…øğ8æ£»•.
+^	java:S125½"<This block of commented-out lines of code should be removed.(Öå†›ûÿÿÿÿ8¶Æ¼•.
+ƒ
+java:S1149˜"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ôüà–8¿À•.
+ƒ
+java:S1149«"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÛÃÚï8÷Œ¿•.
+ƒ
+java:S1149ª"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(œ”¡·8÷Œ¿•.
+ƒ
+java:S1149™"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(³×³µ8¿À•.
+€
+java:S1149:"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(°î®Úşÿÿÿÿ
+b
+java:S2147w"ECombine this catch with the one at line 117, which has the same body.(ï­£Ä8­¸Â•.
+W
+java:S1161V":Add the "@Override" annotation above this method signature(“–ış8¯”Æ•.
+Z	java:S106^"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8¯”Æ•.
