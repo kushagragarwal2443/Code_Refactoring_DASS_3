@@ -1,0 +1,25 @@
+
+v
+java:S3252g"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(á™şÿ8ÁÓ¥…•.
+U	java:S106¤"9Replace this use of System.out or System.err by a logger.(åÓ®R8ÁÓ¥…•.
+`
+java:S1117¶"=Rename "newPatron" which hides the field declared at line 47.(ËÃ»€şÿÿÿÿ8ÁÓ¥…•.
+O	java:S106ç"9Replace this use of System.out or System.err by a logger.(ÅŞ·
+p	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ş”Ş¼ÿÿÿÿÿ8ÁÓ¥…•.
+Z	java:S106_"9Replace this use of System.out or System.err by a logger.(‹¢º²şÿÿÿÿ8ÁÓ¥…•.
+S
+java:S1481o"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙıÿÿÿÿ8ÁÓ¥…•.
+O
+java:S1874¼",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ8ÁÓ¥…•.
+`
+java:S1854¶"=Remove this useless assignment to local variable "newPatron".(ËÃ»€şÿÿÿÿ8ÁÓ¥…•.
+O	java:S106ä"9Replace this use of System.out or System.err by a logger.(îóœ¯
+Q
+java:S1481¶".Remove this unused "newPatron" local variable.(ËÃ»€şÿÿÿÿ8ÁÓ¥…•.
+\
+java:S1155¹">Use isEmpty() to check whether the collection is empty or not.(Ø¿‘—8ÁÓ¥…•.
+N
+java:S16599",Declare "selectedMember" on a separate line.(’ÖÌşşÿÿÿÿ8ÁÓ¥…•.
+O
+java:S1874œ",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ8ÁÓ¥…•.
+u	java:S1165"TRename this field "bowler_db" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©šÿäúÿÿÿÿ8ÁÓ¥…•.

@@ -88,8 +88,6 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 
 		jp.add( cLabel );
 		jp.add( curBowler );
-//		jp.add( fLabel );
-//		jp.add( foul );
 		jp.add( pdLabel );
 		jp.add( pinsDown );
 		
@@ -102,44 +100,41 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 	}
 	
 	public void actionPinSetterView() {
-		
+
 		if (!psShowing) {
 			psv.show();
 			psShowing=true;
-		} else if (psShowing) {
+		} else {
 			psv.hide();
 			psShowing=false;
 		}
-		
+
 	}
-	
+
 	public void actionViewLane() {
-		
+
 		if (!laneShowing) {
 			lv.show();
 			laneShowing=true;
-		} else if (laneShowing) {
+		} else {
 			lv.hide();
 			laneShowing=false;
 		}
-		
+
 	}
   // Moved PinSetter View and LaneView to seperate methods
 	public void actionPerformed( ActionEvent e ) {
-		if ( lane.isPartyAssigned() ) { 
-			if (e.getSource().equals(viewPinSetter)) {
+
+		if(lane.isPartyAssigned()) {
+			if ((e.getSource().equals(viewPinSetter))) {
 				actionPinSetterView();
 			}
-		}
-		if (e.getSource().equals(viewLane)) {
-			if ( lane.isPartyAssigned() ) { 
+			if (e.getSource().equals(viewLane)) {
 				actionViewLane();
 			}
-		}
-		if (e.getSource().equals(maintenance)) {
-			if ( lane.isPartyAssigned() ) {
+			if (e.getSource().equals(maintenance)) {
 				lane.unPauseGame();
-				maintenance.setBackground( Color.GREEN );
+				maintenance.setBackground(Color.GREEN);
 			}
 		}
 	}
@@ -148,7 +143,7 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 		curBowler.setText( ( (Bowler)le.getBowler()).getNickName() );
 		if ( le.isMechanicalProblem() ) {
 			maintenance.setBackground( Color.RED );
-		}	
+		}
 		if (!lane.isPartyAssigned()) {
 			viewLane.setEnabled( false );
 			viewPinSetter.setEnabled( false );
@@ -160,8 +155,6 @@ public class LaneStatusView implements ActionListener, LaneObserver, PinsetterOb
 
 	public void receivePinsetterEvent(PinsetterEvent pe) {
 		pinsDown.setText( (Integer.valueOf(pe.totalPinsDown())).toString() );
-//		foul.setText( ( new Boolean(pe.isFoulCommited()) ).toString() );
-		
 	}
 
 }

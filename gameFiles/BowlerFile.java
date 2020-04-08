@@ -39,24 +39,28 @@ class BowlerFile {
 	public static Bowler getBowlerInfo(String nickName)
 		throws IOException {
 
-		BufferedReader in = new BufferedReader(new FileReader(BOWLER_DAT));
-		String data;
-		while ((data = in.readLine()) != null) {
-			// File format is nick\tfname\te-mail
-			String[] bowler = data.split("\t");
-			if (nickName.equals(bowler[0])) {
-				System.out.println(
-					"Nick: "
-						+ bowler[0]
-						+ " Full: "
-						+ bowler[1]
-						+ " email: "
-						+ bowler[2]);
-				return (new Bowler(bowler[0], bowler[1], bowler[2]));
+		try (BufferedReader in = new BufferedReader(new FileReader(BOWLER_DAT));) {
+			String data;
+			while ((data = in.readLine()) != null) {
+				// File format is nick\tfname\te-mail
+				String[] bowler = data.split("\t");
+				if (nickName.equals(bowler[0])) {
+					System.out.println(
+							"Nick: "
+									+ bowler[0]
+									+ " Full: "
+									+ bowler[1]
+									+ " email: "
+									+ bowler[2]);
+					return (new Bowler(bowler[0], bowler[1], bowler[2]));
+				}
 			}
+			System.out.println("Nick not found...");
+			return null;
+		} catch (Exception e) {
+			System.out.println(e);
+			return null;
 		}
-		System.out.println("Nick not found...");
-		return null;
 	}
 
     /**
@@ -76,10 +80,14 @@ class BowlerFile {
 
 		String data = nickName + "\t" + fullName + "\t" + email + "\n";
 
-		RandomAccessFile out = new RandomAccessFile(BOWLER_DAT, "rw");
-		out.skipBytes((int) out.length());
-		out.writeBytes(data);
-		out.close();
+		try (RandomAccessFile out = new RandomAccessFile(BOWLER_DAT, "rw")) {
+			out.skipBytes((int) out.length());
+			out.writeBytes(data);
+			out.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
 	}
 
     /**
@@ -94,15 +102,46 @@ class BowlerFile {
 
 		Vector allBowlers = new Vector();
 
-		BufferedReader in = new BufferedReader(new FileReader(BOWLER_DAT));
-		String data;
-		while ((data = in.readLine()) != null) {
-			// File format is nick\tfname\te-mail
-			String[] bowler = data.split("\t");
-			//"Nick: bowler[0] Full: bowler[1] email: bowler[2]
-			allBowlers.add(bowler[0]);
+		try (BufferedReader in = new BufferedReader(new FileReader(BOWLER_DAT))) {
+			String data;
+			while ((data = in.readLine()) != null) {
+				// File format is nick\tfname\te-mail
+				String[] bowler = data.split("\t");
+				//"Nick: bowler[0] Full: bowler[1] email: bowler[2]
+				allBowlers.add(bowler[0]);
+			}
+			return allBowlers;
+		} catch (Exception e) {
+			System.out.println(e);
+			return new Vector();
 		}
-		return allBowlers;
+
+	}
+
+	/**
+	 * Retrieves a matching Bowler from the bowler database.
+	 *
+	 * @param nickName	The NickName of the Bowler
+	 *
+	 * @return a Bowler object.
+	 *
+	 */
+
+	public static Bowler registerPatron(String nickName) {
+		Bowler patron = null;
+
+		try {
+			// only one patron / nick.... no dupes, no checks
+
+			patron = getBowlerInfo(nickName);
+
+		} catch (FileNotFoundException e) {
+			System.err.println("Error..." + e);
+		} catch (IOException e) {
+			System.err.println("Error..." + e);
+		}
+
+		return patron;
 	}
 
 }

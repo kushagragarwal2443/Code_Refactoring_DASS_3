@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.Vector;
 import java.util.Iterator;
 import java.net.*;
+import java.awt.*;
 import java.awt.print.*;
 
 public class ScoreReport {
@@ -24,8 +25,7 @@ public class ScoreReport {
 		} catch (Exception e){System.err.println("Error: " + e);}
 		
 		Iterator scoreIt = v.iterator();
-
-		StringBuilder sb = new StringBuilder();
+		
 		content = "";
 		content += "--Lucky Strike Bowling Alley Score Report--\n";
 		content += "\n";
@@ -34,7 +34,7 @@ public class ScoreReport {
 		content += "Final scores for this session: ";
 		content += scores[0];
 		for (int i = 1; i < games; i++){
-			content= sb.append(content).append(", ").append(scores[i]).toString();
+			content += ", " + scores[i];
 		}
 		StringBuilder sd = new StringBuilder();
 		content += ".\n";
@@ -43,9 +43,8 @@ public class ScoreReport {
 		content += "Previous scores by date: \n";
 		while (scoreIt.hasNext()){
 			Score score = (Score) scoreIt.next();
-			content= sd.append(content).append("  ").append(score.getDate()).append(" - ").append(score.getScore()).append("\n").toString();
-//			content = content+ "  " + score.getDate() + " - " +  score.getScore();
-//			content = content+ "\n";
+			content += "  " + score.getDate() + " - " +  score.getScore();
+			content += "\n";
 		}
 		content += "\n\n";
 		content += "Thank you for your continuing patronage.";
@@ -54,7 +53,7 @@ public class ScoreReport {
 
 	public void sendEmail(String recipient) {
 		try {
-			@SuppressWarnings("SpellCheckingInspection") Socket s = new Socket("osfmail.rit.edu", 25);
+			Socket s = new Socket("osfmail.rit.edu", 25);
 			BufferedReader in =
 				new BufferedReader(
 					new InputStreamReader(s.getInputStream(), "8859_1"));
@@ -87,7 +86,7 @@ public class ScoreReport {
 	public void sendPrintout() {
 		PrinterJob job = PrinterJob.getPrinterJob();
 
-		@SuppressWarnings("SpellCheckingInspection") PrintableText printobj = new PrintableText(content);
+		PrintableText printobj = new PrintableText(content);
 
 		job.setPrintable(printobj);
 
@@ -106,9 +105,7 @@ public class ScoreReport {
 		try {
 			out.write(s + "\r\n");
 			out.flush();
-			// System.out.println(s);
 			s = in.readLine();
-			// System.out.println(s);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

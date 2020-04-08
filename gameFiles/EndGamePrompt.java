@@ -94,6 +94,7 @@ public class EndGamePrompt implements ActionListener {
 				Thread.sleep(10);
 			} catch ( InterruptedException e ) {
 				System.err.println( "Interrupted" );
+				Thread.currentThread().interrupt();
 			}
 		}
 		return result;	

@@ -1,4 +1,4 @@
-/*
+/**
  *
  * To change this generated comment edit the template variable "typecomment":
  * Window>Preferences>Java>Templates.
@@ -17,9 +17,8 @@ import java.util.*;
 public class EndGameReport implements ActionListener, ListSelectionListener {
 
 	private final JFrame win;
-	private final JButton printButton;
-	private final JButton finished;
-    private Vector myVector;
+	private final JButton printButton, finished;
+    	private Vector myVector;
 	private final Vector retVal;
 
 	private int result;
@@ -45,7 +44,7 @@ public class EndGameReport implements ActionListener, ListSelectionListener {
 		Vector myVector = new Vector();
 		Iterator iter = (party.getMembers()).iterator();
 		while (iter.hasNext()){
-			myVector.add( ((Bowler)iter.next()).getNick() );
+			myVector.add( ((Bowler)iter.next()).getNickName() );
 		}
         JList memberList = new JList(myVector);
 		memberList.setFixedCellWidth(120);
@@ -131,7 +130,6 @@ public class EndGameReport implements ActionListener, ListSelectionListener {
 	public static void main(String[] args) {
 		Vector bowlers = new Vector();
 		for ( int i=0; i<4; i++ ) {
-			// noinspection SpellCheckingInspection
 			bowlers.add( new Bowler( "aaaaa", "aaaaa", "aaaaa" ) );
 		}
 		Party party = new Party( bowlers );

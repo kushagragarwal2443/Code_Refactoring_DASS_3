@@ -91,34 +91,9 @@ class ControlDesk extends Thread {
 			try {
 				sleep(250);
 			} catch (Exception e) {
-
+				System.out.println(e);
 			}
 		}
-	}
-		
-
-    /**
-     * Retrieves a matching Bowler from the bowler database.
-     *
-     * @param nickName	The NickName of the Bowler
-     *
-     * @return a Bowler object.
-     *
-     */
-
-	private Bowler registerPatron(String nickName) {
-		Bowler patron = null;
-
-		try {
-			// only one patron / nick.... no dupes, no checks
-
-			patron = BowlerFile.getBowlerInfo(nickName);
-
-		} catch (IOException e) {
-			System.err.println("Error..." + e);
-		}
-
-		return patron;
 	}
 
     /**
@@ -144,10 +119,10 @@ class ControlDesk extends Thread {
      */
 
 
-	public void viewScores(Lane ln) {
-		int a = 0; //Added this to suppress the emptyMethod error
-		// TODO: attach a LaneScoreView object to that lane
-	}
+//	public void viewScores(Lane ln) {
+//		int a = 0; //Added this to suppress the emptyMethod error
+//		// TODO: attach a LaneScoreView object to that lane
+//	}
 
     /**
      * Creates a party from a Vector of nicknames and adds them to the wait queue.
@@ -158,8 +133,8 @@ class ControlDesk extends Thread {
 
 	public void addPartyQueue(Vector partyNicks) {
 		Vector partyBowlers = new Vector();
-		for (Object partyNick : partyNicks) {
-			Bowler newBowler = registerPatron(((String) partyNick));
+		for (int i = 0; i < partyNicks.size(); i++) {
+			Bowler newBowler = BowlerFile.registerPatron(((String) partyNicks.get(i)));
 			partyBowlers.add(newBowler);
 		}
 		Party newParty = new Party(partyBowlers);

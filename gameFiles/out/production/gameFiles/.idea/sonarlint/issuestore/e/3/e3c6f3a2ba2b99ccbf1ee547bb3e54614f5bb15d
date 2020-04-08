@@ -1,0 +1,34 @@
+
+S	java:S106w"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍþÿÿÿÿ8ƒÆ…•.
+>
+java:S1643."Use a StringBuilder instead.(èÇÛŒÿÿÿÿÿ8Ž£‹…•.
+>
+java:S1643/"Use a StringBuilder instead.(žºè—ýÿÿÿÿ8Ž£‹…•.
+f
+java:S20958"DUse try-with-resources or close this "Socket" in a "finally" clause.(ŸõË„ýÿÿÿÿ8Ž£‹…•.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¯æö¡úÿÿÿÿ8Ž£‹…•.
+Y
+java:S1854@"<Remove this useless assignment to local variable "boundary".(òŽÚ8Ž£‹…•.
+[
+java:S4719;">Replace charset name argument with StandardCharsets.ISO_8859_1(ØŒ‘÷8Ž£‹…•.
+W
+java:S1854l"5Remove this useless assignment to local variable "s".(ùÔÐÏýÿÿÿÿ8ƒÆ…•.
+a
+java:S2259"?A "NullPointerException" could be thrown; "v" is nullable here.(æÊ¹üúÿÿÿÿ8Ž£‹…•.
+I
+java:S1481'"'Remove this unused "sd" local variable.(£Ã–Ýúÿÿÿÿ8Ž£‹…•.
+9
+java:S1643%"Use a StringBuilder instead.(Ø¤õÕ8Ž£‹…•.
+>
+java:S1148y"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+`
+java:S4719>">Replace charset name argument with StandardCharsets.ISO_8859_1(À®Æùÿÿÿÿ8Ž£‹…•.
+‚
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÌÙ´†8Ž£‹…•.
+J
+java:S1481@"-Remove this unused "boundary" local variable.(òŽÚ8Ž£‹…•.
+E
+java:S1148R"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ƒÆ…•.
+>
+java:S1148n"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

@@ -27,7 +27,8 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	private final JButton assign;
 	private final JFrame win;
 	private final JList partyList;
-	
+	private final JButton Leaderboard;
+
 	/** The maximum  number of members in a party */
 	private final int maxMembers;
 	
@@ -135,6 +136,12 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 			((screenSize.height) / 2) - ((win.getSize().height) / 2));
 		win.show();
 
+		Leaderboard = new JButton("Leaderborad");
+		JPanel leaderboardPanel = new JPanel();
+		leaderboardPanel.setLayout(new FlowLayout());
+		Leaderboard.addActionListener(this);
+		leaderboardPanel.add(Leaderboard);
+		controlsPanel.add(leaderboardPanel);
 	}
 
 	/**
@@ -154,6 +161,9 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		if (e.getSource().equals(finished)) {
 			win.hide();
 			System.exit(0);
+		}
+		if(e.getSource().equals(Leaderboard)) {
+			LeaderboardView leaderborad = new LeaderboardView();
 		}
 	}
 

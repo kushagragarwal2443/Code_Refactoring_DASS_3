@@ -1,0 +1,64 @@
+
+D
+java:S2129Û"!Remove this "Integer" constructor(èÈËÏúÿÿÿÿ8‰şÏ…•.
+[	java:S106Ü"9Replace this use of System.out or System.err by a logger.(±¤–ôúÿÿÿÿ8‰şÏ…•.
+p
+java:S3776¾"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(“–ış8‰şÏ…•.
+N
+java:S1874Ú"0Remove this use of "getHours"; it is deprecated.(òº†8‰şÏ…•.
+Y	java:S125Ê"<This block of commented-out lines of code should be removed.(åª„“8†£†…•.
+W
+java:S4973Œ"9Use the "equals" method if value comparison was intended.(×ˆéú8‰şÏ…•.
+^	java:S125Æ"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8‰şÏ…•.
+u
+java:S3776§"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¤µ–«úÿÿÿÿ8‰şÏ…•.
+^	java:S125Ã"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8‰şÏ…•.
+q
+java:S3776¸"SRefactor this method to reduce its Cognitive Complexity from 111 to the 15 allowed.(ç—8†£†…•.
+^	java:S125½"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8‰şÏ…•.
+L
+java:S1874Ú".Remove this use of "getDay"; it is deprecated.(òº†8‰şÏ…•.
+ƒ
+java:S1149û"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Â›Ëƒ8‰şÏ…•.
+X
+java:S1161¾":Add the "@Override" annotation above this method signature(“–ış8‰şÏ…•.
+s	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨±‡´ÿÿÿÿÿ8†£†…•.
+e
+java:S3973Ç"GUse indentation to denote the code conditionally executed by this "if".(˜üÅ¨8‰şÏ…•.
+K	java:S108Ç")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ8‰şÏ…•.
+R
+java:S1874Û"/Remove this use of "Integer"; it is deprecated.(èÈËÏúÿÿÿÿ8‰şÏ…•.
+V	java:S106ó"9Replace this use of System.out or System.err by a logger.(¯àÅ…8‰şÏ…•.
+K	java:S108™")Either remove or fill this block of code.(¬Àáªøÿÿÿÿ8‰şÏ…•.
+[	java:S106È"9Replace this use of System.out or System.err by a logger.(”ßÇ’úÿÿÿÿ8‰şÏ…•.
+Z
+java:S1854ğ"7Remove this useless assignment to local variable "egp".(«Î‰ÿÿÿÿÿ8‰şÏ…•.
+V	java:S106"9Replace this use of System.out or System.err by a logger.(¤Çú›8‰şÏ…•.
+L
+java:S1066‹"/Merge this if statement with the enclosing one.(û¶÷/8†£†…•.
+B
+java:S2131Û"Use "Integer.toString" instead.(èÈËÏúÿÿÿÿ8‰şÏ…•.
+n	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç—8†£†…•.
+^	java:S125¸"<This block of commented-out lines of code should be removed.(ÛÅÓùüÿÿÿÿ8‰şÏ…•.
+R
+java:S1066Œ"/Merge this if statement with the enclosing one.(Ç€µ ùÿÿÿÿ8†£†…•.
+Z
+java:S1155Ò">Use isEmpty() to check whether the collection is empty or not.(ˆ²Èıùÿÿÿÿ
+N
+java:S1874Ú"0Remove this use of "getMonth"; it is deprecated.(òº†8‰şÏ…•.
+¡
+java:S1158Û"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(èÈËÏúÿÿÿÿ8‰şÏ…•.
+P
+java:S1135õ"2Complete the task associated to this TODO comment.(±•ó½8‰şÏ…•.
+R
+java:S1066™"/Merge this if statement with the enclosing one.(Ç€µ ùÿÿÿÿ8†£†…•.
+G
+java:S1125¶")Remove the literal "false" boolean value.(·ò¢8‰şÏ…•.
+ˆ
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÍšÉÅıÿÿÿÿ8íáñ„•.
+k
+java:S1871Õ"MThis branch's code block is the same as the block for the branch on line 466.(”—¡¼8†£†…•.
+M
+java:S1874Ú"/Remove this use of "getYear"; it is deprecated.(òº†8‰şÏ…•.
+P
+java:S1874Ú"2Remove this use of "getMinutes"; it is deprecated.(òº†8‰şÏ…•.

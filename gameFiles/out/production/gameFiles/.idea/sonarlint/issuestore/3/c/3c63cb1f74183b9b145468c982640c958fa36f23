@@ -1,0 +1,17 @@
+
+G
+java:S1481•"0Remove this unused "addPartyWin" local variable.(¬úÆ‚
+o
+java:S3252o"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(á™þÿ
+U
+java:S1161~":Add the "@Override" annotation above this method signature(ž†§þýÿÿÿÿ
+H
+java:S1874›",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ
+V	java:S125G"<This block of commented-out lines of code should be removed.(àÕÈœøÿÿÿÿ
+V
+java:S1854•"?Remove this useless assignment to local variable "addPartyWin".(¬úÆ‚
+Q	java:S125q"<This block of commented-out lines of code should be removed.(îõŒÓ
+@
+java:S1905³")Remove this unnecessary cast to "Vector".(‡þ…‚
+H
+java:S1874ˆ",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ
