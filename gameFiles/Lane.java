@@ -131,6 +131,7 @@
  * 
  */
 
+import java.io.IOException;
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -654,6 +655,12 @@ public class Lane extends Thread implements PinsetterObserver {
 	public void unPauseGame() {
 		gameIsHalted = false;
 		publish(lanePublish());
+	}
+
+	public void saveGame() throws IOException {
+		gameIsHalted = true;
+		LaneEvent le = lanePublish();
+		le.savetoDB();
 	}
 
 }

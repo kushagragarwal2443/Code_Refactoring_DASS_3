@@ -28,6 +28,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 	private final JFrame win;
 	private final JList partyList;
 	private final JButton Leaderboard;
+	private final JButton LoadPreviousGame;
 
 	/** The maximum  number of members in a party */
 	private final int maxMembers;
@@ -113,12 +114,29 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		partyPanel.add(partyPane);
 		//		partyPanel.add(partyList);
 
+		Leaderboard = new JButton("Leaderborad");
+		JPanel leaderboardPanel = new JPanel();
+		leaderboardPanel.setLayout(new FlowLayout());
+		Leaderboard.addActionListener(this);
+		leaderboardPanel.add(Leaderboard);
+
+		LoadPreviousGame = new JButton("Resume Old Game");
+		JPanel oldGame = new JPanel();
+		oldGame.setLayout(new FlowLayout());
+		LoadPreviousGame.addActionListener(this);
+		oldGame.add(LoadPreviousGame);
+
 		// Clean up main panel
 		colPanel.add(controlsPanel, "East");
 		colPanel.add(laneStatusPanel, "Center");
 		colPanel.add(partyPanel, "West");
+		controlsPanel.add(leaderboardPanel);
+		controlsPanel.add(oldGame);
+
 
 		win.getContentPane().add("Center", colPanel);
+
+
 
 		win.pack();
 
@@ -136,12 +154,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 			((screenSize.height) / 2) - ((win.getSize().height) / 2));
 		win.show();
 
-		Leaderboard = new JButton("Leaderborad");
-		JPanel leaderboardPanel = new JPanel();
-		leaderboardPanel.setLayout(new FlowLayout());
-		Leaderboard.addActionListener(this);
-		leaderboardPanel.add(Leaderboard);
-		controlsPanel.add(leaderboardPanel);
+
 	}
 
 	/**

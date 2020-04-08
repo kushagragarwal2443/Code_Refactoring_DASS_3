@@ -6,6 +6,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.io.IOException;
 import java.util.*;
 
 public class LaneView implements LaneObserver, ActionListener {
@@ -26,7 +27,10 @@ public class LaneView implements LaneObserver, ActionListener {
 	JPanel[][] ballGrid;
 	JPanel[] pins;
 
+	JButton pause;
 	JButton maintenance;
+	JButton resume;
+	JButton save;
 	Lane lane;
 
 	public LaneView(Lane lane, int laneNum) {
@@ -165,7 +169,19 @@ public class LaneView implements LaneObserver, ActionListener {
 				maintenance.addActionListener(this);
 				maintenancePanel.add(maintenance);
 
+				JPanel pausePanel = new JPanel();
+				pausePanel.setLayout(new FlowLayout());
+
+				resume = new JButton("Resume Game");
+				resume.addActionListener(this);
+				pausePanel.add(resume);
+
+				save = new JButton("Save Game");
+				save.addActionListener(this);
+				pausePanel.add(save);
+
 				buttonPanel.add(maintenancePanel);
+				buttonPanel.add(pausePanel);
 
 				cpanel.add(buttonPanel, "South");
 
@@ -189,6 +205,19 @@ public class LaneView implements LaneObserver, ActionListener {
 		if (e.getSource().equals(maintenance)) {
 			lane.pauseGame();
 		}
+
+		if(e.getSource().equals(resume)) {
+			lane.unPauseGame();
+		}
+
+		if(e.getSource().equals(save)) {
+			try {
+				lane.saveGame();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+
 	}
 
 }

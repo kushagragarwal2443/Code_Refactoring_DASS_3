@@ -23,6 +23,7 @@
  *
  */
 
+import java.io.IOException;
 import java.util.HashMap;
 
 public class LaneEvent {
@@ -118,6 +119,11 @@ public class LaneEvent {
 
 	public void setBowler(Bowler theBowler) {
 		bowler = theBowler;
+	}
+
+	public void savetoDB() throws IOException {
+
+		GameHistoryFile.addGame(p,frame,ball,bowler, cumulScore, score, index, frameNum, curScores, mechProb);
 	}
 	
 }
