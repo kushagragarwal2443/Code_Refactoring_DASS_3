@@ -136,7 +136,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 			((screenSize.height) / 2) - ((win.getSize().height) / 2));
 		win.show();
 
-		Leaderboard = new JButton("Leaderborad");
+		Leaderboard = new JButton("Leaderboard");
 		JPanel leaderboardPanel = new JPanel();
 		leaderboardPanel.setLayout(new FlowLayout());
 		Leaderboard.addActionListener(this);
