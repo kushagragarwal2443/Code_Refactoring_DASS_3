@@ -53,4 +53,27 @@ public class ScoreHistoryFile {
 
 	}
 
+
+	public static Vector getallScores()
+			throws IOException {
+		Vector scores = new Vector();
+
+		try (BufferedReader in = new BufferedReader(new FileReader(SCOREHISTORY_DAT))) {
+			String data;
+			while ((data = in.readLine()) != null) {
+				// File format is nick\tfname\te-mail
+				String[] scoredata = data.split("\t");
+				//"Nick: scoredata[0] Date: scoredata[1] Score: scoredata[2]
+
+				scores.add(new Score(scoredata[0], scoredata[1], scoredata[2]));
+
+			}
+			return scores;
+		} catch (Exception e) {
+			System.out.println("Error reading scorehistory file");
+			return new Vector();
+		}
+
+	}
+
 }

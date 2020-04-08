@@ -6,7 +6,7 @@
  * Window>Preferences>Java>Code Generation.
  */
 
-public class Score {
+public class Score implements Comparable<Score> {
 
     private final String nick;
     private final String date;
@@ -32,6 +32,27 @@ public class Score {
 
 	public String toString() {
 		return nick + "\t" + date + "\t" + score;
+	}
+
+	public String resultString() {
+    	return nick +" - " + score;
+	}
+
+	public int compareTo(Score compareScore) {
+    	String compareValue = compareScore.getScore();
+
+    	if(Integer.parseInt(compareValue) > Integer.parseInt(this.getScore())){
+    		return -1;
+		}
+
+    	else if(Integer.parseInt(compareValue) < Integer.parseInt(this.getScore())){
+    		return 1;
+		}
+
+    	else {
+    		return 0;
+		}
+
 	}
 
 }

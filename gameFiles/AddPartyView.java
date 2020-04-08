@@ -158,7 +158,7 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 	}
 	
 	public void action_addPatron() {
-		
+
 		if (selectedNick != null && party.size() < maxSize) {
 			if (party.contains(selectedNick)) {
 				System.err.println("Member already in Party");
@@ -167,7 +167,7 @@ public class AddPartyView implements ActionListener, ListSelectionListener {
 				partyList.setListData(party);
 			}
 		}
-		
+
 	}
 
 	public void actionPerformed(ActionEvent e) {

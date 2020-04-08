@@ -50,16 +50,13 @@ public class LaneEvent {
 		p = pty;
 	}
 
-	public void setCumulScore(int[][] theCumulScore) {
+	public void setScores(int[][] theCumulScore,int[] theCurScores) {
 		cumulScore = theCumulScore;
+		curScores = theCurScores;
 	}
 
 	public void setScore(HashMap theScore) {
 		score = theScore;
-	}
-
-	public void setCurScores(int[] theCurScores) {
-		curScores = theCurScores;
 	}
 
 	public void setBall(int theBall) {

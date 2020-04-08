@@ -38,7 +38,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/LaneStatusView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/LaneView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/LeaderboardView.java">
           <value>
             <set />
           </value>
@@ -53,12 +63,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/Score.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/ScoreHistoryFile.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/ScoreReport.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TopPlayer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/TopPlayerView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/drive.java">
           <value>
             <set />
           </value>
