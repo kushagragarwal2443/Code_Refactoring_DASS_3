@@ -114,7 +114,7 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		partyPanel.add(partyPane);
 		//		partyPanel.add(partyList);
 
-		Leaderboard = new JButton("Leaderborad");
+		Leaderboard = new JButton("Leaderboard");
 		JPanel leaderboardPanel = new JPanel();
 		leaderboardPanel.setLayout(new FlowLayout());
 		Leaderboard.addActionListener(this);
@@ -176,7 +176,11 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 			System.exit(0);
 		}
 		if(e.getSource().equals(Leaderboard)) {
-			LeaderboardView leaderborad = new LeaderboardView();
+			LeaderboardView leaderboard = new LeaderboardView();
+		}
+		if(e.getSource().equals(LoadPreviousGame)) {
+			assert true;
+			// declare and use the class here
 		}
 	}
 
