@@ -697,10 +697,7 @@ public class Lane extends Thread implements PinsetterObserver, Serializable {
 			System.out.println("The Serial was empty and hence a new array is created.");
 		}
 
-		System.out.println(currentSavedGames.toString());
 		currentSavedGames.add(le);
-		System.out.println(currentSavedGames.toString());
-
 		//Writing the updated array:
 		try {
 			FileOutputStream outFile = new FileOutputStream("gameSaveData.ser");

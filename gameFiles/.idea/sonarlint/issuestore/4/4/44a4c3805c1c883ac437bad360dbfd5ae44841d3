@@ -1,0 +1,23 @@
+
+0
+java:S1220""Move this file to a named package.
+8
+java:S1659"""Declare "full" on a separate line.(Â†Â‡
+9
+java:S1659""#Declare "email" on a separate line.(Â†Â‡
+G
+java:S1659&",Declare "selectedMember" on a separate line.(’ÖÌşşÿÿÿÿ
+G
+java:S1874u",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ
+G
+java:S1874|",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ
+H
+java:S1874…",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ
+L
+java:S1481W"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙıÿÿÿÿ
+A
+java:S1068"+Remove this unused "maxSize" private field.(œ¤²æ
+K
+java:S1068&"0Remove this unused "selectedNick" private field.(’ÖÌşşÿÿÿÿ
+M
+java:S1068&"2Remove this unused "selectedMember" private field.(’ÖÌşşÿÿÿÿ

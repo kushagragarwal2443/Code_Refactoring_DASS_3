@@ -1,0 +1,28 @@
+
+7
+java:S1643/"Use a StringBuilder instead.(ú¥£şÿÿÿÿ
+2
+java:S1643'"Use a StringBuilder instead.(­ÜÚ¯
+7
+java:S1643"Use a StringBuilder instead.(¥Ì‹’ÿÿÿÿÿ
+R	java:S107"=Method has 10 parameters, which is greater than 7 authorized.(ƒıÀ´
+1
+java:S1643"Use a StringBuilder instead.(êÚ¯
+1
+java:S16431"Use a StringBuilder instead.(êÚ¯
+2
+java:S1643"Use a StringBuilder instead.(•Ôíê
+2
+java:S16439"Use a StringBuilder instead.(Ğ°ÈÕ
+0
+java:S1220""Move this file to a named package.
+ƒ
+java:S1319"mThe type of the "score" object should be an interface such as "Map" rather than the implementation "HashMap".(ƒıÀ´
+2
+java:S1643%"Use a StringBuilder instead.(¬Õöø
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é²À©
+S	java:S106C"9Replace this use of System.out or System.err by a logger.(‡ —¬øÿÿÿÿ
+{
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(é²À©
+7
+java:S1643"Use a StringBuilder instead.(í¦ˆÒüÿÿÿÿ

@@ -193,10 +193,6 @@ public class LaneView implements LaneObserver, ActionListener {
 			}
 
 			int[][] lescores = le.getCumulScore();
-			for(int[] row: lescores)
-				System.out.println(Arrays.toString(row));
-			System.out.println(numBowlers);
-			System.out.println(le.getFrameNum());
 			for (int k = 0; k < numBowlers; k++) {
 				for (int i = 0; i <= le.getFrameNum() - 1; i++) {
 					if (lescores[k][i] != 0)

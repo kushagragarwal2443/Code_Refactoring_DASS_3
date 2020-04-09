@@ -64,7 +64,6 @@ public class SavedGameDataFile {
 		for(int i=0;i<currentSavedGames.size();i++){
 			Bowler bowl = (Bowler) currentSavedGames.get(i).getParty().getMembers().firstElement();
 			if(name.equals((String)bowl.getNickName())){
-				System.out.println("WE FOUND A MATCH");
 				return currentSavedGames.get(i);
 			}
 		}

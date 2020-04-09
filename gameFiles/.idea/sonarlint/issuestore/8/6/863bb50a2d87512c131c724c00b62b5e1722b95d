@@ -1,0 +1,35 @@
+
+U
+java:S1854""8Remove this useless assignment to local variable "file".(©äÜŒ8å™ªô•.
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(¿¯µ¬ûÿÿÿÿ8š»ñ÷•.
+S
+java:S1068"1Remove this unused "savedDataFile" private field.(ˆ¾Š†úÿÿÿÿ8µÂ”ô•.
+p
+java:S1192"SUse already-defined constant 'savedDataFile' instead of duplicating its value here.(£¾·Õ8å™ªô•.
+{
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(†¬Ü£
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(¿¯µ¬ûÿÿÿÿ8å™ªô•.
+U
+java:S1854:"8Remove this useless assignment to local variable "file".(©äÜŒ8š»ñ÷•.
+F
+java:S1481"")Remove this unused "file" local variable.(©äÜŒ8å™ªô•.
+q
+java:S20955"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(ÑÒ»¥øÿÿÿÿ8š»ñ÷•.
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ˆ¾Š†úÿÿÿÿ8µÂ”ô•.
+q
+java:S2095"OUse try-with-resources or close this "ObjectInputStream" in a "finally" clause.(ÑÒ»¥øÿÿÿÿ8å™ªô•.
+j
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(£¾·Õ8å™ªô•.
+U	java:S106="9Replace this use of System.out or System.err by a logger.(€ ßí8š»ñ÷•.
+F
+java:S1905B")Remove this unnecessary cast to "String".(—®ý¶8ö‰ø÷•.
+F
+java:S1481:")Remove this unused "file" local variable.(©äÜŒ8š»ñ÷•.
+{
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ý²Àñ
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(€ ßí8å™ªô•.
+j
+java:S20954"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(£¾·Õ8š»ñ÷•.
+0
+java:S1220""Move this file to a named package.
+Z	java:S106C"9Replace this use of System.out or System.err by a logger.(ÿ²©Ñùÿÿÿÿ8ÓÄ‘ù•.

@@ -1,0 +1,37 @@
+
+0
+java:S1220""Move this file to a named package.
+|
+java:S1149ƒ"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(óøÛ¥
+B
+java:S1068",Remove this unused "myVector" private field.(î¤€©
+=
+java:S1481‰"&Remove this unused "e" local variable.(ù ëá
+\
+java:S2142w"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+R
+java:S1117,"<Rename "myVector" which hides the field declared at line 21.(ÅŒ‰¥
+G
+java:S1874",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(ÞÿßÉúÿÿÿÿ
+{
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(î¤€©
+G
+java:S1874^",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ
+€
+java:S1149s"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(µÀ£öùÿÿÿÿ
+N	java:S106x"9Replace this use of System.out or System.err by a logger.(ì‹Û‰
+L
+java:S1481@"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙýÿÿÿÿ
+]
+java:S1192…"FDefine a constant instead of duplicating this literal "aaaaa" 3 times.(¶£ž¬
+A
+java:S1659"&Declare "finished" on a separate line.(èÆ½üÿÿÿÿ
+L
+java:S1854‰"5Remove this useless assignment to local variable "e".(ù ëá
+{
+java:S1149,"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÅŒ‰¥
+€
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÂÓèÿÿÿÿÿ
+G
+java:S1874h",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ

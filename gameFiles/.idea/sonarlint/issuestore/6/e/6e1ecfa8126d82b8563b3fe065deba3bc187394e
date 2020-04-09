@@ -1,0 +1,33 @@
+
+y	java:S116"XRename this field "partyNames_db" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡¼œ·ùÿÿÿÿ8„äìó•.
+0
+java:S1220""Move this file to a named package.
+T
+java:S2589z"7Remove this expression which always evaluates to "true"(Þ‹èà8Ô©ˆø•.
+—
+java:S2159z"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(Þ‹èà8ÔÑ‡ø•.
+_
+java:S2259z"BA "NullPointerException" could be thrown; "temp" is nullable here.(Þ‹èà8ÔÑ‡ø•.
+S
+java:S14819"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙýÿÿÿÿ8þÛ«é•.
+X	java:S125"<This block of commented-out lines of code should be removed.(®¶©É8þÛ«é•.
+]	java:S125i"<This block of commented-out lines of code should be removed.(ËÍƒÈýÿÿÿÿ8äÕ¯ø•.
+X	java:S125M"<This block of commented-out lines of code should be removed.(‡Ûîƒ8þÛ«é•.
+N
+java:S1874}",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ8Üù”ù•.
+N
+java:S1874Z",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ8þÛ«é•.
+v
+java:S32520"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(õÐ 8þÛ«é•.
+‡
+java:S1149"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¡¼œ·ùÿÿÿÿ8þÛ«é•.
+X	java:S125"<This block of commented-out lines of code should be removed.(„—”š8þÛ«é•.
+U	java:S106e"9Replace this use of System.out or System.err by a logger.(ˆ˜–û8äÕ¯ø•.
+O
+java:S1874€",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ8þÛ«é•.
+r	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öøšùÿÿÿÿ8þÛ«é•.
+]	java:S1252"<This block of commented-out lines of code should be removed.(ðªÊÿÿÿÿÿÿ8þÛ«é•.
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(‹¢º²þÿÿÿÿ8þÛ«é•.
+Ž
+java:S1319"qThe type of the "laneInput" object should be an interface such as "Set" rather than the implementation "HashSet".(ÝÐ×8ú˜ªø•.
+Z	java:S106q"9Replace this use of System.out or System.err by a logger.(˜¡Òúÿÿÿÿ8…ƒÝ÷•.

@@ -1,0 +1,29 @@
+
+t
+java:S2293l"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ùúµùøÿÿÿÿ
+I
+java:S1481’"2Remove this unused "topPlayerView" local variable.(Éú­ñ
+k	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß¯ï¨úÿÿÿÿ
+S	java:S106("9Replace this use of System.out or System.err by a logger.(‹¢º²þÿÿÿÿ
+k	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ùúµùøÿÿÿÿ
+n	java:S116"TRename this field "scores_db" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Ä’Ùüÿÿÿÿ
+L
+java:S14819"1Remove this unused "buttonMargin" local variable.(ÌÎÍÙýÿÿÿÿ
+Q	java:S125Y"<This block of commented-out lines of code should be removed.(‡Ûîƒ
+G
+java:S1874f",Remove this use of "show"; it is deprecated.(Ó‰‚Øøÿÿÿÿ
+o
+java:S32520"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(õÐ 
+0
+java:S1220""Move this file to a named package.
+Q	java:S125"<This block of commented-out lines of code should be removed.(„—”š
+V	java:S1252"<This block of commented-out lines of code should be removed.(ðªÊÿÿÿÿÿÿ
+H
+java:S1874•",Remove this use of "hide"; it is deprecated.(ò«€Àùÿÿÿÿ
+X
+java:S1854’"ARemove this useless assignment to local variable "topPlayerView".(Éú­ñ
+P
+java:S4973›"9Use the "equals" method if value comparison was intended.(Úæ“
+Q	java:S125"<This block of commented-out lines of code should be removed.(®¶©É
+U
+java:S4973ž"9Use the "equals" method if value comparison was intended.(·ø‹Úýÿÿÿÿ
