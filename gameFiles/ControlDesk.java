@@ -47,6 +47,9 @@ class ControlDesk extends Thread {
 
 	/** The collection of Lanes */
 	private final HashSet lanes;
+	public HashSet returnLanes(){
+		return  lanes;
+	}
 
 	/** The party wait queue */
 	private final Queue partyQueue;
@@ -117,7 +120,6 @@ class ControlDesk extends Thread {
 
     /**
      */
-
 
 //	public void viewScores(Lane ln) {
 //		int a = 0; //Added this to suppress the emptyMethod error

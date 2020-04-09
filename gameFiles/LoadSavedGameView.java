@@ -3,6 +3,8 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -15,14 +17,15 @@ public class LoadSavedGameView implements ActionListener {
     private final JList savedGameList;
     //private final Vector party;
     private Vector partyNames_db;
+    private HashSet lanes;
 
 
-    public LoadSavedGameView() {
+    public LoadSavedGameView(HashSet laneInput) {
 
         win = new JFrame("Load Saved Game");
         win.getContentPane().setLayout(new BorderLayout());
         ((JPanel) win.getContentPane()).setOpaque(false);
-
+        lanes = laneInput;
         JPanel colPanel = new JPanel();
         colPanel.setLayout(new GridLayout(1, 2));
 
@@ -88,23 +91,38 @@ public class LoadSavedGameView implements ActionListener {
 
     }
 
-    public static Vector vectorFormat(Vector scores) {
+    public void assignSavedLane(LaneEvent arg) {
+        Iterator it = lanes.iterator();
 
-        Vector<String> temp_score_db = new Vector<String>();
-        Iterator value = scores.iterator();
-        while(value.hasNext()) {
-            Score temp = (Score) value.next();
-            temp_score_db.add(temp.resultString());
+        if (it.hasNext()) {
+            Lane curLane = (Lane) it.next();
+
+            if (! curLane.isPartyAssigned()) {
+                System.out.println("ok... assigning this party");
+                curLane.assignSavedParty(arg);
+            }
         }
-
-        return temp_score_db;
+        //publish(new ControlDeskEvent(getPartyQueue()));
     }
 
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource().equals(loadThisGame)) {
 
-            assert true;
+            String s = (String) savedGameList.getSelectedValue();
+            System.out.println("The Selected Value is :" + s);
+            LaneEvent temp = null;
+            if(!s.isEmpty()){
+                try {
+                    temp = SavedGameDataFile.returnLaneEvent(s);
+                } catch (IOException ioException) {
+                    temp = null;
+                }
+            }
+            if(!temp.equals(null)){
+                assignSavedLane(temp);
+            }
+            win.hide();
         }
         if(e.getSource().equals(close)) {
             win.hide();

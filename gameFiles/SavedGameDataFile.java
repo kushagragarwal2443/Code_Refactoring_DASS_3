@@ -46,4 +46,29 @@ public class SavedGameDataFile {
 
 	}
 
+	public static LaneEvent returnLaneEvent(String name) throws IOException {
+		ArrayList<LaneEvent> currentSavedGames = new ArrayList<>();
+		try {
+			FileInputStream fis = new FileInputStream("gameSaveData.ser");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			currentSavedGames = (ArrayList<LaneEvent>) ois.readObject();
+			System.out.println("Number of saved games: " + currentSavedGames.size());
+		}
+		catch (FileNotFoundException | ClassNotFoundException e) {
+			File file = new File("gameSaveData.ser");
+		}
+		catch (EOFException e){
+			System.out.println("The Serial was empty and hence a new array is created.");
+		}
+
+		for(int i=0;i<currentSavedGames.size();i++){
+			Bowler bowl = (Bowler) currentSavedGames.get(i).getParty().getMembers().firstElement();
+			if(name.equals((String)bowl.getNickName())){
+				System.out.println("WE FOUND A MATCH");
+				return currentSavedGames.get(i);
+			}
+		}
+		return null;
+	}
+
 }

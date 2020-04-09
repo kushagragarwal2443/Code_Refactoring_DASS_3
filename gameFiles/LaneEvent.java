@@ -36,10 +36,11 @@ public class LaneEvent implements Serializable {
 	int[][] cumulScore;
 	HashMap score;
 	int index;
+	boolean loading = false;
 	int frameNum;
 	int[] curScores;
 	boolean mechProb;
-	
+
 	public LaneEvent( Party pty, int[][] theCumulScore, HashMap theScore, int[] theCurScores, int theBall) {
 		p = pty;
 		cumulScore = theCumulScore;
@@ -48,6 +49,12 @@ public class LaneEvent implements Serializable {
 		ball = theBall;
 	}
 
+	public void setLoading(boolean val){
+		loading = val;
+	}
+	public boolean getLoading(){
+		return loading;
+	}
 	public void setParty(Party pty){
 		p = pty;
 	}

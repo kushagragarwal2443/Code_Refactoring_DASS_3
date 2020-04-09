@@ -152,7 +152,10 @@ public class LaneView implements LaneObserver, ActionListener {
 				}
 			}
 
-			if (le.getFrameNum() == 1 && le.getBall() == 0 && le.getIndex() == 0) {
+			if ((le.getFrameNum() == 1 && le.getBall() == 0 && le.getIndex() == 0) || le.getLoading()) {
+				if(le.getLoading()){
+					le.setLoading(false);
+				}
 				System.out.println("Making the frame.");
 				cpanel.removeAll();
 				cpanel.add(makeFrame(le.getParty()), "Center");
@@ -190,10 +193,14 @@ public class LaneView implements LaneObserver, ActionListener {
 			}
 
 			int[][] lescores = le.getCumulScore();
+			for(int[] row: lescores)
+				System.out.println(Arrays.toString(row));
+			System.out.println(numBowlers);
+			System.out.println(le.getFrameNum());
 			for (int k = 0; k < numBowlers; k++) {
 				for (int i = 0; i <= le.getFrameNum() - 1; i++) {
 					if (lescores[k][i] != 0)
-						scoreLabel[k][i].setText((new Integer(lescores[k][i])).toString());
+						scoreLabel[k][i].setText(Integer.toString(lescores[k][i]));
 				}
 				setBallLabel(le, k);
 			}

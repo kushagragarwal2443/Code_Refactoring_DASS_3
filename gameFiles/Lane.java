@@ -131,6 +131,7 @@
  * 
  */
 
+import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.*;
@@ -142,7 +143,7 @@ public class Lane extends Thread implements PinsetterObserver, Serializable {
 	private Pinsetter setter;
 	private HashMap scores;
 	private ArrayList subscribers;
-
+	private boolean loading = false;
 	private boolean gameIsHalted;
 
 	private boolean partyAssigned;
@@ -234,10 +235,9 @@ public class Lane extends Thread implements PinsetterObserver, Serializable {
 			canThrowAgain = true;
 			tenthFrameStrike = false;
 			ball = 0;
-			while (canThrowAgain) {
-				setter.ballThrown();		// simulate the thrower's ball hiting
-				ball++;
-			}
+
+			setter.ballThrown();		// simulate the thrower's ball hiting
+			ball++;
 
 			if (frameNumber == 9){
 				finalScores[bowlIndex][gameNumber] = cumulScores[bowlIndex][9];
@@ -404,6 +404,23 @@ public class Lane extends Thread implements PinsetterObserver, Serializable {
 		resetScores();
 	}
 
+	public void assignSavedParty( LaneEvent arg ) {
+		party = arg.getParty();
+		resetBowlerIterator();
+		partyAssigned = true;
+		frameNumber = arg.getFrameNum()-1;
+		ball = arg.getBall();
+		currentThrower = arg.getBowler();
+		bowlIndex = arg.getIndex();
+		scores = arg.getScore();
+		loading = true;
+		curScores = arg.getCurScores();
+		cumulScores = arg.getCumulScore();
+
+		finalScores = new int[party.getMembers().size()][128]; //Hardcoding a max of 128 games, bite me.
+		gameNumber = 0;
+	}
+
 	/** markScore()
 	 *
 	 * Method that marks a bowlers score on the board.
@@ -438,6 +455,10 @@ public class Lane extends Thread implements PinsetterObserver, Serializable {
 		laneEvent.setFrameNum(frameNumber+1);
 		laneEvent.setMechProb(gameIsHalted);
 		laneEvent.setBowler(currentThrower);
+		if(loading){
+			laneEvent.setLoading(true);
+			loading = false;
+		}
 		return laneEvent;
 	}
 
