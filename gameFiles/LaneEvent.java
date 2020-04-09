@@ -24,9 +24,10 @@
  */
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class LaneEvent {
+public class LaneEvent implements Serializable {
 
 	private Party p;
 	int frame;

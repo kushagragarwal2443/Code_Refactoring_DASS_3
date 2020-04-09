@@ -17,12 +17,14 @@
  *
  */
 
+import java.io.Serializable;
+
 /**
  *  Class that holds all bowler info
  *
  */
 
-public class Bowler {
+public class Bowler implements Serializable {
 
     private final String fullName;
     private final String nickName;

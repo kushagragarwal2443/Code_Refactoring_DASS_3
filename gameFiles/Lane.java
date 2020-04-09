@@ -131,12 +131,13 @@
  * 
  */
 
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.logging.Logger;
 
 
-public class Lane extends Thread implements PinsetterObserver {	
+public class Lane extends Thread implements PinsetterObserver, Serializable {
 	private Party party;
 	private Pinsetter setter;
 	private HashMap scores;
@@ -661,6 +662,36 @@ public class Lane extends Thread implements PinsetterObserver {
 		gameIsHalted = true;
 		LaneEvent le = lanePublish();
 		le.savetoDB();
+		ArrayList<LaneEvent> currentSavedGames = new ArrayList<>();
+		try {
+			FileInputStream fis = new FileInputStream("gameSaveData.ser");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			currentSavedGames = (ArrayList<LaneEvent>) ois.readObject();
+			System.out.println("Number of saved games: " + currentSavedGames.size());
+		}
+		 catch (FileNotFoundException | ClassNotFoundException e) {
+			File file = new File("gameSaveData.ser");
+		}
+		catch (EOFException e){
+			System.out.println("The Serial was empty and hence a new array is created.");
+		}
+
+		System.out.println(currentSavedGames.toString());
+		currentSavedGames.add(le);
+		System.out.println(currentSavedGames.toString());
+
+		//Writing the updated array:
+		try {
+			FileOutputStream outFile = new FileOutputStream("gameSaveData.ser");
+			ObjectOutputStream outObjectFile = new ObjectOutputStream(outFile);
+			outObjectFile.writeObject(currentSavedGames);
+			System.out.println("Succesfully Saved");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+			assert true;
+		}
 	}
 
 }

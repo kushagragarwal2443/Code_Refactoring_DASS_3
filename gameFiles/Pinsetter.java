@@ -70,9 +70,10 @@
  *
  */
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Pinsetter {
+public class Pinsetter implements Serializable {
 
 	private final Random rnd;
 	private final Vector subscribers;
