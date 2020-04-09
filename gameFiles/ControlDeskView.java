@@ -180,6 +180,8 @@ public class ControlDeskView implements ActionListener, ControlDeskObserver {
 		}
 		if(e.getSource().equals(LoadPreviousGame)) {
 			assert true;
+			LoadSavedGameView loadGameDialogBox	 = new LoadSavedGameView();
+
 			// declare and use the class here
 		}
 	}
