@@ -3,8 +3,6 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Vector;
 
@@ -14,9 +12,9 @@ public class LoadSavedGameView implements ActionListener {
     private final JButton loadThisGame;
     private final JButton close;
     //private final JList partyList;
-    private final JList allScores;
+    private final JList savedGameList;
     //private final Vector party;
-    private Vector scores_db;
+    private Vector partyNames_db;
 
 
     public LoadSavedGameView() {
@@ -34,16 +32,16 @@ public class LoadSavedGameView implements ActionListener {
         resultPanel.setBorder(new TitledBorder("Saved Game List"));
 
         try {
-            scores_db = new Vector(ScoreHistoryFile.getallScores());
+            partyNames_db = new Vector(SavedGameDataFile.getPartyNames());
         } catch (Exception e) {
             System.err.println("File Error");
-            scores_db = new Vector();
+            partyNames_db = new Vector();
         }
 
-        allScores = new JList(vectorFormat(scores_db));
-        allScores.setVisibleRowCount(10);
-        allScores.setFixedCellWidth(240);
-        JScrollPane LeaderboardPane = new JScrollPane(allScores);
+        savedGameList = new JList(partyNames_db);
+        savedGameList.setVisibleRowCount(10);
+        savedGameList.setFixedCellWidth(240);
+        JScrollPane LeaderboardPane = new JScrollPane(savedGameList);
         LeaderboardPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         //allScores.addListSelectionListener(this);
