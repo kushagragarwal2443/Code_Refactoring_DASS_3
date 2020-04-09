@@ -204,7 +204,6 @@ public class Lane extends Thread implements PinsetterObserver {
 			partyAssigned = false;
 			Iterator scoreIt = party.getMembers().iterator();
 			party = null;
-			partyAssigned = false;
 
 			publish(lanePublish());
 
@@ -658,9 +657,15 @@ public class Lane extends Thread implements PinsetterObserver {
 	}
 
 	public void saveGame() throws IOException {
-		gameIsHalted = true;
+		//gameIsHalted = true;
 		LaneEvent le = lanePublish();
 		le.savetoDB();
+		partyAssigned = false;
+		party = null;
+
+		publish(lanePublish());
+//
+//		gameFinished = true;
 	}
 
 }

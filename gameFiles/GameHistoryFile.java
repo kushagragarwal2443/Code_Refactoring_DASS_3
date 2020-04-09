@@ -39,7 +39,7 @@ public class GameHistoryFile {
             data += '\n';
         }
 
-        data += "\nScore :\n";
+        data += "Score :\n";
 
         for(int i = 0;i < Members.size(); i++) {
             int[] scores = (int[])score.get(Members.get(i));
